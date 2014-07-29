@@ -6,15 +6,33 @@ The Huawei E220 is a Huawei HSDPA access device (modem) manufactured by Huawei a
 
 E220 works well with Linux, as support for it was added in Linux kernel 2.6.20 (2007-02-04[2]), but there are workarounds for distributions with older kernels. The card is also supported by Vodafone Mobile Connect Card driver for Linux, and it is possible to monitor the signal strength through other Linux applications.
 
+### System on Test
+All the scripts are tested with : 
+
++ Arduino TRE beta testing version (T00000023)
++ Samsung microSD 8GB
++ Linux xx-K56CM 3.13.0-32-generic #57-Ubuntu SMP Tue Jul 15 03:51:08 UTC 2014 x86_64 x86_64 x86_64 GNU/Linux
++ Huawei E220 3G modem (3 Sim Card)
+
+
 ### Attach the Device 
-Attach the device,
+Attach the device, before to attach the 3G modem and use it, test the USB hub before, on the beta testing board you need to fix some issue 
+before use all the USB without problems (not in Arduino TRE production board).
+
 
 ### Check the USB Modem 
+With all the USB active connect the 3G modem trougth USB hub, and if the USB modem is listed in the system USB device : 
 
     lsusb 
     
     >> Bus 001 Device 005: ID 12d1:1003 Huawei Technologies Co., Ltd. E220 HSDPA Modem / E230/E270/E870 HSDPA/HSUPA Modem
     
+The device is recognized, the name and the corresponded drivers match our device. If the drivers don't match the device go deep in the installation drivers process, all dettails are in the path: 
+
+    
+    
+**Arduino TRE mount a Debian GNU/Linux distro and do not need to manually install the Huawei modem drivers, a lot of drivers are native implemented** 
+
 Modem Huawaei E220 ha codice 12d1:1003, you can check in the file ... TODO ... if the 
 
 
@@ -76,3 +94,9 @@ When the board is powerd on again the fix is active. How to disable the fix. Ope
     poweroff 
     
 When the board is powerd on again the fix is not active anymore.
+
+
+### more stuff 
+Check the official Debian E220 [guide][1]
+
+[1]: https://wiki.debian.org/Huawei/E220
