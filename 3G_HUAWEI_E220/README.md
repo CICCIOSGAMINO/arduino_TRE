@@ -27,38 +27,76 @@ With all the USB active connect the 3G modem trougth USB hub, and if the USB mod
     
     >> Bus 001 Device 005: ID 12d1:1003 Huawei Technologies Co., Ltd. E220 HSDPA Modem / E230/E270/E870 HSDPA/HSUPA Modem
     
-The device is recognized, the name and the corresponded drivers match our device. If the drivers don't match the device go deep in the installation drivers process, all dettails are in the path: 
-
+    ls /dev/ttyUSB* 
     
+    >> get all serial devices attached to USB 
+    
+    /dev/ttyUSB0  /dev/ttyUSB1
+    
+The device is recognized, the name and the corresponded drivers match our device. If the drivers don't match the device go deep in the installation drivers process, You can use modconf to load usbserial drivers with card vendor & id as arguments. 
+
     
 **Arduino TRE mount a Debian GNU/Linux distro and do not need to manually install the Huawei modem drivers, a lot of drivers are native implemented** 
 
-Modem Huawaei E220 ha codice 12d1:1003, you can check in the file ... TODO ... if the 
+### wvdial 
+WvDial is a utility that helps in making modem-based connections to the Internet that is included in some important Linux distributions.
+WvDial is a Point-to-Point Protocol dialer: it dials a modem and starts pppd in order to connect to the Internet.
+
+When WvDial starts, it first loads its configuration from /etc/wvdial.conf and ~/.wvdialrc, which contain basic information about the modem port, speed, and init string, along with information about your ISP, such as the phone number, your user name, and your password. 
 
 
+    less /etc/wvdial.conf               // and set the params 
+    
+    [Dialer E220]
+    Modem = /dev/ttyUSB0
+    Baud = 3000000
+    Init1 = at+cgdcont=1,"ip","tre.it"
+    Carrier Check = yes
+    Dial Command = ATDT
+    Phone = *99#
+    Username = a
+    Password = a
+    Stupid Mode = yes
+    Auto Reconnect = yes
 
-less /etc/wvdial.conf 
 
-less /etc/ppp/peers/wvdial  ??? 
+    less /etc/ppp/peers/wvdial          // other params 
+    
+Now that the wvdial 'Dial E220' is setted on ppp0 interface, launch the interface : 
 
-per lanciare il interfaccia ppp0 wvdial E220
+    wvdial E220                 // launch the E220 interface on ppp0 
 
 ### Check the ppp0 
 Check the interface ppp0 just setted on Huawei E220 modem with the ifconfig command: 
     
+    ip addr show 
+    
+    or 
+    
     ifconfig
 
-    ppp0    Link encap:Point-to-Point Protocol  
-            inet addr:10.124.8.42  P-t-P:10.64.64.64 Mask:255.255.255.255
-            UP POINTOPOINT RUNNING NOARP MULTICAST  MTU:1500  Metric:1
-            RX packets:11 errors:0 dropped:0 overruns:0 frame:0
-            TX packets:12 errors:0 dropped:0 overruns:0 carrier:0
-            collisions:0 txqueuelen:3 
-            RX bytes:242 (242.0 B)  TX bytes:341 (341.0 B)
-            
-The ppp0 interface work, Point to Point protocol activated with the IP address 
+    eth0: <BROADCAST,MULTICAST,UP,LOWER_UP> mtu 1500 qdisc pfifo_fast state UP qlen 1000
+    link/ether 1c:ba:8c:a2:e8:e3 brd ff:ff:ff:ff:ff:ff
+    inet 192.168.0.107/24 brd 192.168.0.255 scope global eth0
+    inet6 fe80::1eba:8cff:fea2:e8e3/64 scope link 
+    valid_lft forever preferred_lft forever
+
+    ppp0: <POINTOPOINT,MULTICAST,NOARP,UP,LOWER_UP> mtu 1500 qdisc pfifo_fast state UNKNOWN qlen 3
+    link/ppp 
+    inet 10.86.19.73 peer 10.64.64.64/32 scope global ppp0
+    
+The ppp0 interface is up with these details show us, This contains more information. It shows all our addresses, and to which cards they belong. ’inet’ stands for Internet (IPv4). There are lots of other address families, but these don’t concern us right now.
+
+Let’s examine eth0 somewhat closer. It says that it is related to the inet address ’192.168.0.107/24’. What does this mean? The /24 stands for the number of bits that are in the Network Address. There are 32 bits, so we have 8 bits left that are part of our network. The first 24 bits of 192.168.0.107 correspond to 192.168.0.0, our Network Address, and our netmask is 255.255.255.0.
+
+With ppp0, the same concept goes, though the numbers are different. Its address is 10.86.19.73,
+without a subnet mask. This means that we have a point-to-point connection and that every address, with
+the exception of 10.86.19.73, is remote. There is more information, however. It tells us that on the
+other side of the link there is, yet again, only one address, 10.64.64.64. The /32 tells us that there are no
+’network bits’.
+
 ### DNS
-Check if the DNS server address are setted: 
+Check if the DNS server address are setted/resolved by the interface : 
 
     /etc/resolv.conf
     
@@ -70,9 +108,19 @@ Ping from the ppp0 interface to check if the interface (driver + config) works:
 
     ping -I ppp0 12.36.21.2
     
+    PING www.google.com (173.194.70.106) from 10.86.19.73 ppp0: 56(84) bytes of data.
+    64 bytes from fa-in-f106.1e100.net (173.194.70.106): icmp_req=2 ttl=45 time=1632 ms
+    64 bytes from fa-in-f106.1e100.net (173.194.70.106): icmp_req=1 ttl=45 time=2634 ms
+    64 bytes from fa-in-f106.1e100.net (173.194.70.106): icmp_req=3 ttl=45 time=642 ms
+    64 bytes from fa-in-f106.1e100.net (173.194.70.106): icmp_req=4 ttl=45 time=162 ms
+    64 bytes from fa-in-f106.1e100.net (173.194.70.106): icmp_req=5 ttl=45 time=161 ms
+    64 bytes from fa-in-f106.1e100.net (173.194.70.106): icmp_req=6 ttl=45 time=161 ms
+    
+If ping operation on ppp0 interface goes ok your Huawei modem is working ! 
+
     
 ### Check the situation from Remote 
-We have a natting problem on the 3G propetary network to back communication with the board, try the sim for the internet of things. 
+We have a natting problem on the 3G propetary network to reach the device from outside the 3G network back communication with the board, try the sim for the internet of things. 
 
 ### USB hot plug temporary fix (only in Arduino TRE beta)
 We are now working on a fix for the USB hot plug issue, but it’s not active by default because we are investigating on an issue: if a device is quickly plugged/unplagged or if a connected device reenumerates (e.g. when programming an external Arduino Leonardo), the USB port or the entire board get unstable. 
