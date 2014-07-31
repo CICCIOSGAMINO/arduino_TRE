@@ -16,9 +16,9 @@ solution for everyday activities such as transferring files, browsing the Intern
 
 First of all connect the Wify dongle in one of the USB ports (no matter which one) and check is the USB driver for the Wify dongle is loaded (a lot of drivers are present right now in debian environment) : 
 
-  lsusb               // check the usb 
-  dmesg -c 
-  dmesg               // check what appened when dongle is plugged 
+  lsusb
+  dmesg -c
+  dmesg
   
 If info like that are received the wify dongle's driver is loaded right : 
 
