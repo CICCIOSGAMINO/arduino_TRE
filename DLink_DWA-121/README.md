@@ -57,11 +57,11 @@ Continuing on, a WiFi interface is an Ethernet interface which also provides WiF
   
 At first you have the wlan0 interface available, now you need to configure the wify params to get access to the wify network. Wireless network interface configuration can be performed using a connection manager (such as NetworkManager) or through Debian's **/etc/network/interfaces** file with a special purpose utility (such as wpa_supplicant). 
 
-Start with some base command to keep in mind 
+Start with some base command to keep in mind : 
 
-  sudo /etc/init.d/networking restart           // restart the networking interface 
-  sudo /etc/init.d/networking start             // start 
-  sudo /etc/init.d/networking stop              // stop 
+  sudo /etc/init.d/networking restart   // restart the net interface
+  sudo /etc/init.d/networking start
+  sudo /etc/init.d/networking stop
 
   
 
