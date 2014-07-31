@@ -82,3 +82,9 @@ Because the Arduino TRE has two processors, the summary section shows the charac
 + Max DC Current per I/O Pin 6 mA (sink and source)
 + On board storage capability MicroSD card slot
 + LCD expansion connector LVDS
+
+
+### How to use pins
+
+The pins on the Arduino TRE headers have limited current source and sink capability, so special  care should be taken when external components are connected to the board. The following notes apply specifically to the header pins connected to the Sitara processor (lower current capability, 3.3V logic), but the same considerations are valid also for the pins connected to the AVR processor (higher current capability, 5V logic). 
+
