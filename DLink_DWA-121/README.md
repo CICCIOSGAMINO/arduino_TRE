@@ -10,14 +10,12 @@ Connect to a high-speed wireless network with the D-Link® Wireless N 150 Pico U
 which provides increased speed and range over the Wireless G, giving you a faster, more reliable wireless connection. Wireless N 150 is an excellent
 solution for everyday activities such as transferring files, browsing the Internet, and downloading multimedia.
 
-
-
 ### Connect the Dongle 
 
-First of all connect the Wify dongle in one of the USB ports (no matter which one) and check is the USB driver for the Wify dongle is loaded (a lot of drivers are present right now in debian environment) : 
+First of all connect the Wify dongle in one of the USB ports (no matter which one) and check is the USB driver for the Wify dongle is loaded (a lot of drivers are present right now in debian environment):
 
   lsusb
-  dmesg -c
+  dmesg -c 
   dmesg
   
 If info like that are received the wify dongle's driver is loaded right : 
