@@ -52,6 +52,10 @@ Start with some base command to keep in mind :
     sudo /etc/init.d/networking restart   // restart the net interface
     sudo /etc/init.d/networking start
     sudo /etc/init.d/networking stop
+    
+Scan the network available by wlan0 interface : 
+
+    iwlist wlan0 scan  
 
   
 
