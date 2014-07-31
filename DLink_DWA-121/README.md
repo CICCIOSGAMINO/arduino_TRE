@@ -29,11 +29,11 @@ If info like that are received the wify dongle's driver is loaded right :
   
 Non-free drivers and firmware are produced by companies refusing or unable to cooperate with the free software community. With non-free drivers and firmware support is often unavailable or severely strained. For instance features are often left out, bugs go unfixed, and what support does exist from the manufacture is fleeting.
 
->By encouraging good social practices the community is able to support end-users. Complex installation procedures are no >longer required and support continues long after a product has been discontinued.
+> By encouraging good social practices the community is able to support end-users. Complex installation procedures are no longer required and support continues long after a product has been discontinued.
 
->currently there are only a few modern wifi chipsets readily available that work with free software systems. For USB >wifi devices this list includes the Realtek RTL8187B chipset (802.11G) and the Atheros AR9170 chipset (802.11N). For >Mini PCIe all cards with an Atheros chipset are supported.
+> currently there are only a few modern wifi chipsets readily available that work with free software systems. For USB wifi devices this list includes the Realtek RTL8187B chipset (802.11G) and the Atheros AR9170 chipset (802.11N). For Mini PCIe all cards with an Atheros chipset are supported.
 
->Wifi has always been a problem for free software users. USB Wifi cards are becoming less free. With the older 802.11G >standard many USB wifi cards had free drivers and did not require non-free firmware. With 802.11N there is only one >chipset on the market from Atheros which is completely free.
+> Wifi has always been a problem for free software users. USB Wifi cards are becoming less free. With the older 802.11G standard many USB wifi cards had free drivers and did not require non-free firmware. With 802.11N there is only one chipset on the market from Atheros which is completely free.
 
 ### Config
 
@@ -41,12 +41,8 @@ Continuing on, a WiFi interface is an Ethernet interface which also provides WiF
 
   iwconfig 
   
-  wlan0     IEEE 802.11bgn  ESSID:off/any  
-          Mode:Managed  Access Point: Not-Associated   Tx-Power=0 dBm   
-          Retry  long limit:7   RTS thr=2347 B   Fragment thr:off
-          Encryption key:off
-          Power Management:on
-          
+  wlan0     IEEE 802.11bgn  ESSID:off/any  Mode:Managed  Access Point: Not-Associated   Tx-Power=0 dBm  Retry  long limit:7   RTS thr=2347 B   Fragment thr:off Encryption key:off Power Management:on
+  
   lo        no wireless extensions.
 
   eth0      no wireless extensions.
@@ -54,6 +50,7 @@ Continuing on, a WiFi interface is an Ethernet interface which also provides WiF
   usb0      no wireless extensions.
 
   can0      no wireless extensions.
+  
   
 At first you have the wlan0 interface available, now you need to configure the wify params to get access to the wify network. Wireless network interface configuration can be performed using a connection manager (such as NetworkManager) or through Debian's **/etc/network/interfaces** file with a special purpose utility (such as wpa_supplicant). 
 
