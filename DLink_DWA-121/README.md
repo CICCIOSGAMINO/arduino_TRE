@@ -65,5 +65,7 @@ Scan the network available by wlan0 interface :
 
 You can collects more info at the debian wifi [resource][1] & [HowToUse][2]
 
+**Lot of PROBLEMS in the Arduino Tre Beta with the default wify dongle** sometimes working sometimes don't !! 
+
 [1]: https://wiki.debian.org/WiFi
 [2]: https://wiki.debian.org/WiFi/HowToUse
