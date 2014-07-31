@@ -14,16 +14,16 @@ solution for everyday activities such as transferring files, browsing the Intern
 
 First of all connect the Wify dongle in one of the USB ports (no matter which one) and check is the USB driver for the Wify dongle is loaded (a lot of drivers are present right now in debian environment):
 
-  lsusb
-  dmesg -c 
-  dmesg
+    lsusb
+    dmesg -c 
+    dmesg
   
 If info like that are received the wify dongle's driver is loaded right : 
 
-  Bus 001 Device 002: ID 0424:2514 Standard Microsystems Corp. USB 2.0 Hub
-  Bus 001 Device 001: ID 1d6b:0002 Linux Foundation 2.0 root hub
-  Bus 002 Device 001: ID 1d6b:0002 Linux Foundation 2.0 root hub
-  **Bus 001 Device 003: ID 2001:3308 D-Link Corp. DWA-121 802.11n Wireless N 150 Pico Adapter [Realtek RTL8188CUS]**
+    Bus 001 Device 002: ID 0424:2514 Standard Microsystems Corp. USB 2.0 Hub
+    Bus 001 Device 001: ID 1d6b:0002 Linux Foundation 2.0 root hub
+    Bus 002 Device 001: ID 1d6b:0002 Linux Foundation 2.0 root hub
+    **Bus 001 Device 003: ID 2001:3308 D-Link Corp. DWA-121 802.11n Wireless N 150 Pico Adapter [Realtek RTL8188CUS]**
   
 Non-free drivers and firmware are produced by companies refusing or unable to cooperate with the free software community. With non-free drivers and firmware support is often unavailable or severely strained. For instance features are often left out, bugs go unfixed, and what support does exist from the manufacture is fleeting.
 
@@ -37,26 +37,21 @@ Non-free drivers and firmware are produced by companies refusing or unable to co
 
 Continuing on, a WiFi interface is an Ethernet interface which also provides WiFi-specific configuration parameters. These parameters are controlled using the **iwconfig** program.
 
-  iwconfig 
-  
-  wlan0     IEEE 802.11bgn  ESSID:off/any  Mode:Managed  Access Point: Not-Associated   Tx-Power=0 dBm  Retry  long limit:7   RTS thr=2347 B   Fragment thr:off Encryption key:off Power Management:on
-  
-  lo        no wireless extensions.
-
-  eth0      no wireless extensions.
-
-  usb0      no wireless extensions.
-
-  can0      no wireless extensions.
+    iwconfig 
+    wlan0     IEEE 802.11bgn  ESSID:off/any  Mode:Managed  Access Point: Not-Associated   Tx-Power=0 dBm  Retry  long limit:7   RTS thr=2347 B   Fragment thr:off Encryption key:off Power Management:on
+    lo        no wireless extensions
+    eth0      no wireless extensions
+    usb0      no wireless extensions
+    can0      no wireless extensions
   
   
 At first you have the wlan0 interface available, now you need to configure the wify params to get access to the wify network. Wireless network interface configuration can be performed using a connection manager (such as NetworkManager) or through Debian's **/etc/network/interfaces** file with a special purpose utility (such as wpa_supplicant). 
 
 Start with some base command to keep in mind : 
 
-  sudo /etc/init.d/networking restart   // restart the net interface
-  sudo /etc/init.d/networking start
-  sudo /etc/init.d/networking stop
+    sudo /etc/init.d/networking restart   // restart the net interface
+    sudo /etc/init.d/networking start
+    sudo /etc/init.d/networking stop
 
   
 
