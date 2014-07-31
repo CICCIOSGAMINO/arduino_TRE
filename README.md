@@ -43,4 +43,11 @@ In addition, the Arduino TRE is partially the result of a close collaboration be
 + MicroSD card
 + Support LCD expansion connector
 
- !! news coming soon !! 
+
+### Memory 
+
+The ATmega32U4 has 32 KB of flash memory (with 4 KB are used for the bootloader) used to upload the sketches. It also has 2.5 KB of SRAM and 1 KB of EEPROM (which can be read and written with the EEPROM library). 
+
+The memory on the Sitara is not embedded inside the processor. The RAM and the storage memory are externally connected. The Arduino TRE has 512 MB of DDR3 RAM and doesn’t have flash memory. 
+
+The Linux system and the storage memory are on the SD card. The Arduino TRE comes with a 8GB micro SD card with the preloaded Linux image based on Debian. Once inserted inside the micro SD card slot the Arduino TRE is ready to go. The Arduino TRE can’t run without the SD card preloaded with the Linux image.
