@@ -51,3 +51,34 @@ The ATmega32U4 has 32 KB of flash memory (with 4 KB are used for the bootloader)
 The memory on the Sitara is not embedded inside the processor. The RAM and the storage memory are externally connected. The Arduino TRE has 512 MB of DDR3 RAM and doesn’t have flash memory. 
 
 The Linux system and the storage memory are on the SD card. The Arduino TRE comes with a 8GB micro SD card with the preloaded Linux image based on Debian. Once inserted inside the micro SD card slot the Arduino TRE is ready to go. The Arduino TRE can’t run without the SD card preloaded with the Linux image.
+
+
+Because the Arduino TRE has two processors, the summary section shows the characteristics of each one in two separate tables.
+ 
+**AVR Arduino microcontroller** : 
+
++ Microcontroller ATmega32U4
++ Operating Voltage 5V
++ Digital I/O Voltage 5V
++ Digital I/O Pins 20
++ PWM Channels 7
++ Analog Input Channels 12
++ Max DC Current per I/O Pin 40 mA
++ Max DC Current for 3.3V Pin 50 mA
++ Flash Memory 32 KB (of which 4 KB used by bootloader)
++ SRAM 2.5 KB
++ EEPROM 1 KB
++ Clock Speed 16 MHz
+   
+**Linux system** Processor Texas Instrument Sitara AM3359AZCZ100 (ARM Cortex-A8) : 
+
++ Clock Speed 1 GHz
++ SRAM DDR3L 512 MB RAM
++ Networking Ethernet 10/100USB port 1 USB 2.0 device port, 4 USB 2.0 host ports
++ Video HDMI (1920x1080)
++ Audio HDMI digital audio, stereo analog audio input and output
++ Digital I/O Pins (3.3V logic) 23
++ PWM Channels (3.3V logic) 4
++ Max DC Current per I/O Pin 6 mA (sink and source)
++ On board storage capability MicroSD card slot
++ LCD expansion connector LVDS
