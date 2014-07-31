@@ -37,12 +37,33 @@ Non-free drivers and firmware are produced by companies refusing or unable to co
 
 ### Config
 
-Continuing on, a WiFi interface is an Ethernet interface which also provides WiFi-specific configuration parameters. These parameters are controlled using the iwconfig program.
+Continuing on, a WiFi interface is an Ethernet interface which also provides WiFi-specific configuration parameters. These parameters are controlled using the **iwconfig** program.
+
+  iwconfig 
+  
+  wlan0     IEEE 802.11bgn  ESSID:off/any  
+          Mode:Managed  Access Point: Not-Associated   Tx-Power=0 dBm   
+          Retry  long limit:7   RTS thr=2347 B   Fragment thr:off
+          Encryption key:off
+          Power Management:on
+          
+  lo        no wireless extensions.
+
+  eth0      no wireless extensions.
+
+  usb0      no wireless extensions.
+
+  can0      no wireless extensions.
+  
+At first you have the wlan0 interface available, now you need to configure the wify params to get access to the wify network : 
+
+  
 
 
 
 ### Info
 
-You can collects more info at the debian wifi [resource][1]
+You can collects more info at the debian wifi [resource][1] & [HowToUse][2]
 
 [1]: https://wiki.debian.org/WiFi
+[2]: https://wiki.debian.org/WiFi/HowToUse
