@@ -65,7 +65,7 @@ Set the /etc/network/interfaces :
 
 
 
-### Info
+### Info ...
 
 You can collects more info at the debian wifi [resource][1] & [HowToUse][2]
 
