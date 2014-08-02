@@ -58,6 +58,8 @@ Start with some base command to keep in mind :
 Scan the network available by wlan0 interface : 
 
     iwlist wlan0 scan  
+    
+Set the /etc/network/interfaces : 
 
   
 
