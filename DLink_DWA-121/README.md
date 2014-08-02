@@ -61,6 +61,17 @@ Scan the network available by wlan0 interface :
     
 Set the /etc/network/interfaces : 
 
+    auto wlan0
+    iface wlan0 inet dhcp
+        wpa-ssid mynetworkname
+        wpa-psk mysecretpassphrase
+    
+Uo the interface wlan0 
+
+    ifup wlan0
+    
+### Config with wpa_supplicant
+
   
 
 
