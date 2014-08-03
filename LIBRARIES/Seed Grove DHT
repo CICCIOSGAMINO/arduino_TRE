@@ -26,4 +26,12 @@ Is a better choice hold the user's and arduino's libraries in differet folder.
 To import the library on the Arduino TRE board, you can use the IDE (not working so good in beta testing) or load the 
 libary in the user library path (/home/tre/Arduino/libraries ). 
 
+These are the link to use/import the library for the DHT Temperature Umidity sensor of Seeed Studio system Grove Pro. 
+
++ DHT Sensor [Wiky][1] 
+
+
+
+[1]: http://www.seeedstudio.com/wiki/Grove_-_Temperature_and_Humidity_Sensor
+
 
