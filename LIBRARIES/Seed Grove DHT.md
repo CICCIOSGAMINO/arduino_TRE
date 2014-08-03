@@ -42,7 +42,10 @@ One more thing we need to do before start to use our libraries, change the file 
     chown -R tre.arduino        // or the actual user 
     ls -l                       // check the permission 
     
-Now if no errors are raised you can view your library in the Web IDE menu in > Libraries on the left of the window.
+Now if no errors are raised you can view your library in the Web IDE menu in > Libraries on the left of the window. And 
+you can use the library in the Arduino sketch. 
+
+
 
 
 
