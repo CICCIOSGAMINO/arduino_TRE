@@ -33,6 +33,16 @@ These are the link to use/import the library for the DHT Temperature Umidity sen
 + DHT Sensor [github-lib][3]
 
 
+Clone the libary in /home/tre/Arduino/libraries directory to have libary in right place :
+
+  git clone [github-lib][3] 
+  
+One more thing we need to do before start to use our libraries, change the file permission of the files of the library (on /libraries folder) : 
+
+    $ chown -R tre.arduino        // or the actual user 
+
+
+
 
 [1]: http://www.seeedstudio.com/wiki/Grove_-_Temperature_and_Humidity_Sensor
 [2]: https://github.com/CICCIOSGAMINO/Grove_Temperature_And_Humidity_Sensor
