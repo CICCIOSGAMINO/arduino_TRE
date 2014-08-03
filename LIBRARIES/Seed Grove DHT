@@ -13,8 +13,17 @@ requirements.
 
 Here some path for find the right things in just a second on the Arduino TRE board  : 
 
-+ sketch ( ~/home/tre/Arduino ) 
-+ user's libraries ( ~/home/tre/Arduino/libraries )
-+ example ( ~/usr/src/arduino/examples )
-+ hardware (~/usr/src/arduino/hardware )
-+ libraries (~/usr/src/arduino/libraries ) 
++ sketch ( /home/tre/Arduino ) 
++ user's libraries ( /home/tre/Arduino/libraries )
++ example ( /usr/src/arduino/examples )
++ hardware (/usr/src/arduino/hardware )
++ libraries (/usr/src/arduino/libraries ) 
+
+Is a better choice hold the user's and arduino's libraries in differet folder. 
+
+### Import the library on board
+
+To import the library on the Arduino TRE board, you can use the IDE (not working so good in beta testing) or load the 
+libary in the user library path (/home/tre/Arduino/libraries ). 
+
+
