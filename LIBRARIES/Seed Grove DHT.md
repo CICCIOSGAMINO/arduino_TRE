@@ -39,7 +39,10 @@ Clone the libary in /home/tre/Arduino/libraries directory to have libary in righ
   
 One more thing we need to do before start to use our libraries, change the file permission of the files of the library (on /libraries folder) : 
 
-    $ chown -R tre.arduino        // or the actual user 
+    chown -R tre.arduino        // or the actual user 
+    ls -l                       // check the permission 
+    
+Now if no errors are raised you can view your library in the Web IDE menu in > Libraries on the left of the window.
 
 
 
