@@ -29,11 +29,13 @@ libary in the user library path (/home/tre/Arduino/libraries ).
 These are the link to use/import the library for the DHT Temperature Umidity sensor of Seeed Studio system Grove Pro. 
 
 + DHT Sensor [Wiky][1]
-+ DHT Sensor [github-lib][2]
++ DHT Sensor [github][2]
++ DHT Sensor [github-lib][3]
 
 
 
 [1]: http://www.seeedstudio.com/wiki/Grove_-_Temperature_and_Humidity_Sensor
-[2]: https://github.com/CICCIOSGAMINO/Grove_Temperature_And_Humidity_Sensor.git
+[2]: https://github.com/CICCIOSGAMINO/Grove_Temperature_And_Humidity_Sensor
+[3]: https://github.com/CICCIOSGAMINO/Grove_Temperature_And_Humidity_Sensor.git
 
 
