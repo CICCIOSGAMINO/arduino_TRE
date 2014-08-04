@@ -54,7 +54,7 @@ you can use the library in the Arduino sketch !
 
 
 [1]: http://www.seeedstudio.com/wiki/Grove_-_Barometer_Sensor
-[2]: https://github.com/Seeed-Studio/Grove_Barometer_Sensor
-[3]: https://github.com/Seeed-Studio/Grove_Barometer_Sensor.git
+[2]: https://github.com/CICCIOSGAMINO/Grove_Barometer_Sensor
+[3]: https://github.com/CICCIOSGAMINO/Grove_Barometer_Sensor.git
 
 
