@@ -45,11 +45,9 @@ One more thing we need to do before start to use our libraries, change the file 
     ls -l                       // check the permission 
     
 Now if no errors are raised you can view your library in the Web IDE menu in > Libraries on the left of the window. And 
-you can use the library in the Arduino sketch !
+you can use the library in the Arduino sketch ! 
 
-
-
-
+(We have some problem for the moment with this library on Arduino TRE )
 
 
 [1]: http://www.seeedstudio.com/wiki/Grove_-_Temperature_and_Humidity_Sensor
