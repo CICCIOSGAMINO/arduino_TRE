@@ -97,6 +97,31 @@ setting is request(in the following section) :
 
 Now edit **/etc/network/interfaces**. The required configuration is much dependent on your particular setup. See the following example to get an idea of how it works : 
 
+Simple for a free "FREE-NET" net, with no passw and dhcp active : 
+
+    # SETTING - NET 
+    auto wlan0
+    iface wlan0 inet dhcp
+        wireless-essid FREE-NET
+        wireless-mode managed
+        
+    ifconfig wlan0 up 
+    ifdown wlan0
+    ifup wlan0 
+    
+
+Check the wlan0 network details : 
+
+    ip addr show 
+    
+    4: wlan0: <BROADCAST,MULTICAST,UP,LOWER_UP> mtu 1500 qdisc mq state UP qlen 1000
+    link/ether 1c:af:f7:66:c9:e0 brd ff:ff:ff:ff:ff:ff
+    inet 192.168.0.106/24 brd 192.168.0.255 scope global wlan0
+    inet6 fe80::1eaf:f7ff:fe66:c9e0/64 scope link 
+       valid_lft forever preferred_lft forever
+       
+Seems to be all good, the network wlan0 get the rigth address from the gateway ! 
+
     
     
 ### utility
