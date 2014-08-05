@@ -1,7 +1,7 @@
 Wify - DLink DWA-140
 ====================
 
-###Intro 
+### Intro 
 
 The D-Link® RangeBooster N® USB Adapter (DWA-140) is a Wireless N compliant adapter for your desktop or notebook PC.
 It delivers up to 12x faster speeds1and 4x farther range1 than an previous-generation network while staying backward
@@ -14,7 +14,9 @@ gaming, secure Web surfing, faster file transfers, enhanced audio streaming, and
 homes and offices1. The DWA-140 supports WPA™ and WPA2™ encryption and includes a Wi-Fi Protected Setup™ (WPS) Push
 Button to easily connect to a wireless network.
 
+
 ### System on Test
+
 All the scripts are tested with : 
 
 + Arduino TRE beta testing version (T00000023)
