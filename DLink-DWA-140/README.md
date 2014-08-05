@@ -1,6 +1,8 @@
 Wify - DLink DWA-140
 ====================
 
+ ![DLink DWA-140][2]
+
 ### Intro
 
 
@@ -190,3 +192,4 @@ When the board is powerd on again the fix is not active anymore.
 Check the official Debian Wify [guide][1]
 
 [1]: https://wiki.debian.org/WiFi/HowToUse
+[2]: http://www.dlink.com/-/media/Images/Products/DWA/140/DWA%20140%20Left.png
