@@ -86,12 +86,23 @@ setting is request(in the following section) :
                     Bit Rates:6 Mb/s; 12 Mb/s; 24 Mb/s; 48 Mb/s
                     Mode:Master
 
-config to connect to a free NET : 
+
+Now edit **/etc/network/interfaces**. The required configuration is much dependent on your particular setup. See the following example to get an idea of how it works : 
+
+    
+    
+### utility
+
+    /etc/init.d/networking restart              // restart the net-interfaces
+    ifconfig wlan0 up                           // up the interface wlan0
+    ifup wlan0                                  // up the wlan0 
+    ifdown wlan0                                // down the wlan0
 
     
 
 
 ### DNS
+
 Check if the DNS server address are setted/resolved by the interface : 
 
     /etc/resolv.conf
@@ -102,9 +113,9 @@ Check if the DNS server address are setted/resolved by the interface :
 ### Ping     
 Ping from the ppp0 interface to check if the interface (driver + config) works: 
 
-    ping -I ppp0 12.36.21.2
+    ping -I wlan0 12.36.21.2
     
-    PING www.google.com (173.194.70.106) from 10.86.19.73 ppp0: 56(84) bytes of data.
+    PING www.google.com (173.194.70.106) from 10.86.19.73 wlan0: 56(84) bytes of data.
     64 bytes from fa-in-f106.1e100.net (173.194.70.106): icmp_req=2 ttl=45 time=1632 ms
     64 bytes from fa-in-f106.1e100.net (173.194.70.106): icmp_req=1 ttl=45 time=2634 ms
     64 bytes from fa-in-f106.1e100.net (173.194.70.106): icmp_req=3 ttl=45 time=642 ms
@@ -112,7 +123,7 @@ Ping from the ppp0 interface to check if the interface (driver + config) works:
     64 bytes from fa-in-f106.1e100.net (173.194.70.106): icmp_req=5 ttl=45 time=161 ms
     64 bytes from fa-in-f106.1e100.net (173.194.70.106): icmp_req=6 ttl=45 time=161 ms
     
-If ping operation on ppp0 interface goes ok your Huawei modem is working ! 
+If ping operation on wlan0 interface goes ok your DLink dongle is working ! 
 
     
 ### Check the situation from Remote 
@@ -141,6 +152,6 @@ When the board is powerd on again the fix is not active anymore.
 
 
 ### more stuff 
-Check the official Debian E220 [guide][1]
+Check the official Debian Wify [guide][1]
 
-[1]: https://wiki.debian.org/Huawei/E220
+[1]: https://wiki.debian.org/WiFi/HowToUse
