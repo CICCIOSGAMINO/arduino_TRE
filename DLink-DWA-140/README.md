@@ -1,7 +1,8 @@
 Wify - DLink DWA-140
 ====================
 
-### Intro 
+### Intro
+
 
 The D-Link® RangeBooster N® USB Adapter (DWA-140) is a Wireless N compliant adapter for your desktop or notebook PC.
 It delivers up to 12x faster speeds1and 4x farther range1 than an previous-generation network while staying backward
@@ -17,6 +18,7 @@ Button to easily connect to a wireless network.
 
 ### System on Test
 
+
 All the scripts are tested with : 
 
 + Arduino TRE beta testing version (T00000023)
@@ -27,6 +29,7 @@ All the scripts are tested with :
 
 ### Attach the Device 
 
+
 Plug-in the device and start to check how the Debian system probe it, check if errors raised  : 
 
     dmesg -c 
@@ -34,6 +37,7 @@ Plug-in the device and start to check how the Debian system probe it, check if e
 
 
 ### Check the Dongle
+
 
 With all the USB active connect the 3G modem trougth USB hub, and if the USB modem is listed in the system USB device : 
 
@@ -45,7 +49,9 @@ With all the USB active connect the 3G modem trougth USB hub, and if the USB mod
     
 **Arduino TRE mount a Debian GNU/Linux distro and do not need to manually install the Huawei modem drivers, a lot of drivers are native implemented** 
 
+
 ### Check the Interface 
+
 
 First of all check if the interfce is retrived (wlan0 or somethings else) if the interface is finded the driver and the device are mapped, after that you can up the interface : 
 
@@ -67,7 +73,9 @@ Ok, the interface is mapped, now it's time to up the interface and check the net
     5: wlan0: <NO-CARRIER,BROADCAST,MULTICAST,UP> mtu 1500 qdisc mq state DOWN qlen 1000
     link/ether 1c:af:f7:66:c9:e0 brd ff:ff:ff:ff:ff:ff
     
+    
 ### config 
+
 
 It's time to config the wlan0 interface with the network details to connect, if WPA network is active a wpa_supplicant 
 setting is request(in the following section) : 
@@ -93,6 +101,7 @@ Now edit **/etc/network/interfaces**. The required configuration is much depende
     
 ### utility
 
+
     /etc/init.d/networking restart              // restart the net-interfaces
     ifconfig wlan0 up                           // up the interface wlan0
     ifup wlan0                                  // up the wlan0 
@@ -102,6 +111,7 @@ Now edit **/etc/network/interfaces**. The required configuration is much depende
 
 
 ### DNS
+
 
 Check if the DNS server address are setted/resolved by the interface : 
 
