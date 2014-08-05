@@ -3,6 +3,8 @@ DLink DWA-121 Wireless N 150 Pico USB
 
 ### PROBLEM TO FIX (Arduino TRE Beta), discontinued working !! 
 
+![DLink DWA-121 N150][3]
+
 ### Intro 
 
 Simple DLink Wireless dongle to get the wireless N 150 connectivity to Arduino TRE board, to set the wireless connection you can use the
@@ -84,3 +86,4 @@ You can collects more info at the debian wifi [resource][1] & [HowToUse][2]
 
 [1]: https://wiki.debian.org/WiFi
 [2]: https://wiki.debian.org/WiFi/HowToUse
+[3]: http://www.dlink.com/-/media/Images/Products/DWA/121/DWA%20121%20Left.png
