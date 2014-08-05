@@ -69,7 +69,7 @@ First of all check if the interfce is retrived (wlan0 or somethings else) if the
 Ok, the interface is mapped, now it's time to up the interface and check the network params : 
           
     
-    ifconfig wlan0 up       // up the interface wlan0
+    ifconfig wlan0 up       // up the interface wlan0 more power than ifup wlan0
     ip addr show            // show interfaces details 
     
     5: wlan0: <NO-CARRIER,BROADCAST,MULTICAST,UP> mtu 1500 qdisc mq state DOWN qlen 1000
@@ -107,7 +107,7 @@ Simple for a free "FREE-NET" net, with no passw and dhcp active :
         wireless-essid FREE-NET
         wireless-mode managed
         
-    ifconfig wlan0 up 
+    ifconfig wlan0 up        // more low level than ifup 
     ifdown wlan0
     ifup wlan0 
     
@@ -130,7 +130,7 @@ Seems to be all good, the network wlan0 get the rigth address from the gateway !
 
 
     /etc/init.d/networking restart              // restart the net-interfaces
-    ifconfig wlan0 up                           // up the interface wlan0
+    ifconfig wlan0 up                           // up the interface wlan0  more low level than ifup 
     ifup wlan0                                  // up the wlan0 
     ifdown wlan0                                // down the wlan0
 
