@@ -56,9 +56,39 @@ First of all check if the interfce is retrived (wlan0 or somethings else) if the
         Retry  long limit:7   RTS thr:off   Fragment thr:off
         Encryption key:off
         Power Management:on
+        
+
+Ok, the interface is mapped, now it's time to up the interface and check the network params : 
           
     
     ifconfig wlan0 up       // up the interface wlan0
+    ip addr show            // show interfaces details 
+    
+    5: wlan0: <NO-CARRIER,BROADCAST,MULTICAST,UP> mtu 1500 qdisc mq state DOWN qlen 1000
+    link/ether 1c:af:f7:66:c9:e0 brd ff:ff:ff:ff:ff:ff
+    
+### config 
+
+It's time to config the wlan0 interface with the network details to connect, if WPA network is active a wpa_supplicant 
+setting is request(in the following section) : 
+
+    iwlist wlan0 scanning 
+    
+    wlan0     Scan completed :
+          Cell 01 - Address: B8:A3:88:A2:88:88
+                    Channel:13
+                    Frequency:2.472 GHz (Channel 13)
+                    Quality=67/70  Signal level=-43 dBm  
+                    Encryption key:off
+                    ESSID:"MY-NET"
+                    Bit Rates:1 Mb/s; 2 Mb/s; 5.5 Mb/s; 11 Mb/s; 9 Mb/s
+                              18 Mb/s; 36 Mb/s; 54 Mb/s
+                    Bit Rates:6 Mb/s; 12 Mb/s; 24 Mb/s; 48 Mb/s
+                    Mode:Master
+
+config to connect to a free NET : 
+
+    
 
 
 ### DNS
