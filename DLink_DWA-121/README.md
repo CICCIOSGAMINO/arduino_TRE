@@ -70,7 +70,8 @@ Set the /etc/network/interfaces :
     
 Uo the interface wlan0 
 
-    ifup wlan0
+    ifconfig wlan0 up       // up the interface more low level than ifup 
+    ifup wlan0              // up the interface 
     
 ### Config with wpa_supplicant
 
