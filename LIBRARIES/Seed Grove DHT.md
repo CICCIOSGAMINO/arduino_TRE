@@ -1,4 +1,4 @@
-(NOT WORKING)
+(NOT WORKING - IN TESTING )
 
 Grove Temperature & Umidity Sensor- DHT 
 ==========================================
