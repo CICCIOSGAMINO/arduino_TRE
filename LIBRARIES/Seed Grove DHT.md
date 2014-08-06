@@ -11,6 +11,8 @@ the basic version. The detecting range of this sensor is 5% RH - 99% RH, and -40
 satisfyingly reaches up to 2% RH and 0.5°C. A professional choice for applications that have relatively strict
 requirements.
 
+
+
 ### Arduino TRE path : 
 
 Here some path for find the right things in just a second on the Arduino TRE board  : 
