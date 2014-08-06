@@ -18,7 +18,7 @@ homes and offices1. The DWA-140 supports WPA™ and WPA2™ encryption and inclu
 Button to easily connect to a wireless network.
 
 
-### System on Test
+### System
 
 
 All the scripts are tested with : 
