@@ -47,7 +47,7 @@ One more thing we need to do before start to use our libraries, change the file 
 Now if no errors are raised you can view your library in the Web IDE menu in > Libraries on the left of the window. And 
 you can use the library in the Arduino sketch ! 
 
-(We have some problem for the moment with this library on Arduino TRE )
+(We have some problem for the moment with this library on Arduino TRE ), seems not working ! 
 
 
 [1]: http://www.seeedstudio.com/wiki/Grove_-_Temperature_and_Humidity_Sensor
