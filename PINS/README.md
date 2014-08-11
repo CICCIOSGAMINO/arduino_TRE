@@ -8,6 +8,8 @@ Testing the Sitara Pins
 
 Pin Name  Mapped Pin Name
 
+GPIO1_21    96(YELLOW_LED)
+
 GPIO1_21  96, YELLOW_LED
 GPIO1_22  97, RED_LED
 GPIO1_24  98, GREEN_LED
