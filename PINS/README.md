@@ -53,7 +53,7 @@ Here we have some sketch to test the GPIO pins on the ArduinoTRE board, the circ
       delay(1000);               
     }
 
-All Digital GPIO Tested ! 
+All Digital GPIO Tested (104-127) LED/BUTTON ! 
 
 
 ### Pin Mapping (Sitara)
