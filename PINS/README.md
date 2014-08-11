@@ -6,38 +6,36 @@ Testing the Sitara Pins
 
 ### Pin Mapping (Sitara)
 
-Pin Name  Mapped Pin Name
-
-GPIO1\_21 - 96(YELLOW\_LED)
-GPIO1\_22 - 97(RED\_LED)
-GPIO1\_24 - 98(GREEN\_LED)
-
-GPIO1_22  97, RED_LED
-GPIO1_24  98, GREEN_LED
-GPIO1_23  99, BLUE_LED 
-U10  GPIO0_22  100 (PWM) T10  GPIO0_23  101 (PWM) 
-U14  GPIO1_18  102 (PWM) 
-T14  GPIO1_19  103 (PWM) 
-U7  GPIO1_0  104 
-V7  GPIO1_1  105 
-R8  GPIO1_2  106 
-T8  GPIO1_3  107 
-U8  GPIO1_4  108 
-V8  GPIO1_5  109 
-R9  GPIO1_6  110 
-T9  GPIO1_7  111 
-T13  GPIO2_0  112 
-U6  GPIO2_4  113 
-T7  GPIO2_3  114 
-R7  GPIO2_2  115 
-T11  GPIO0_26  116 
-B12  GPIO3_18  117 
-C13  GPIO3_19  118 
-D13  GPIO3_20  119 
-U9  GPIO1_30  120 
-V9  GPIO1_31  121 
-T12  GPIO1_12  122 
-R12  GPIO1_13  123 
-V13  GPIO1_14  124 
-U13  GPIO1_15  125 
-A15  GPIO0_19  126 
+| Pin Number  Pin Name  Mapped Pin Name             |            |   |
+|---------------------------------------------------|------------|---|
+| V15  GPIO1_21  96                                 | YELLOW_LED |   |
+| U15  GPIO1_22  97                                 | RED_LED    |   |
+| V16  GPIO1_24  98                                 | GREEN_LED  |   |
+| LED_BUILTIN                                       |            |   |
+| T15  GPIO1_23  99                                 | BLUE_LED   |   |
+| U10  GPIO0_22  100 (PWM) T10  GPIO0_23  101 (PWM) |            |   |
+| U14  GPIO1_18  102 (PWM)                          |            |   |
+| T14  GPIO1_19  103 (PWM)                          |            |   |
+| U7  GPIO1_0  104                                  |            |   |
+| V7  GPIO1_1  105                                  |            |   |
+| R8  GPIO1_2  106                                  |            |   |
+| T8  GPIO1_3  107                                  |            |   |
+| U8  GPIO1_4  108                                  |            |   |
+| V8  GPIO1_5  109                                  |            |   |
+| R9  GPIO1_6  110                                  |            |   |
+| T9  GPIO1_7  111                                  |            |   |
+| T13  GPIO2_0  112                                 |            |   |
+| U6  GPIO2_4  113                                  |            |   |
+| T7  GPIO2_3  114                                  |            |   |
+| R7  GPIO2_2  115                                  |            |   |
+| T11  GPIO0_26  116                                |            |   |
+| B12  GPIO3_18  117                                |            |   |
+| C13  GPIO3_19  118                                |            |   |
+| D13  GPIO3_20  119                                |            |   |
+| U9  GPIO1_30  120                                 |            |   |
+| V9  GPIO1_31  121                                 |            |   |
+| T12  GPIO1_12  122                                |            |   |
+| R12  GPIO1_13  123                                |            |   |
+| V13  GPIO1_14  124                                |            |   |
+| U13  GPIO1_15  125                                |            |   |
+| A15  GPIO0_19  126 D14  GPIO0_20  127             |            |   |
