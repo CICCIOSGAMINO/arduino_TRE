@@ -26,6 +26,14 @@ pinMode(), digitalWrite(), and digitalRead() functions. They operate at 3.3 Volt
 + BTS
 + BSNS
 + ONOFF
++ 
+
+### How connect a LED 
+The AVR GPIO pins have enough current capability to drive a typical LED at its maximum current (e.g. 20mA), but the Sitara GPIO pins don’t. If you want to quickly connect an LED to a Sitara GPIO pin just to get an indication of some sort. You can use the same circuit you use with the ArduinoUNO but with a Resistence of at **less 880 OHM**.  
+
+![ArduinoUNO LED][1]
+
+
 
 ### Pin Mapping (Sitara)
 
@@ -65,4 +73,4 @@ pinMode(), digitalWrite(), and digitalRead() functions. They operate at 3.3 Volt
 | GPIO0\_20   |  127             |
 ----------------------------------
 
-
+[1]: http://arduino.cc/en/uploads/Tutorial/ExampleCircuit_bb.png
