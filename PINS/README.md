@@ -2,7 +2,30 @@ Test the Sitara GPIO pins
 =========================
 
 ### Intro 
-Testing the Sitara Pins 
+Testing the Sitara Pins, the pins on the Arduino TRE headers have limited current source and sink capability, so special 
+care should be taken when external components are connected to the board. The following notes apply specifically to the header pins connected to the Sitara processor (lower current capability, 3.3V logic), but the same considerations are valid also for the pins connected to the AVR processor (higher current capability, 5V logic). 
+
+### Sitara pins details
+
++ RGB LED The Red, Green and Blue LEDs are accessible as digital pins as 97, 98 and 99.
++ SD LED The Yellow LED (status of the SD card) is accessible as digital pin number 96.
++ PWM: Pins 100 to 103 Provide 8-bit PWM output with the analogWrite() function. The resolution of the PWM can
+be changed with the analogWriteResolution() function.
++ Digital I/O: Pins 104 to 127 Each of the 23 digital pins on the Arduino TRE can be used as an input or output, using
+pinMode(), digitalWrite(), and digitalRead() functions. They operate at 3.3 Volts. Each pin can provide (source) a current of 6 mA, or accept (sink) a current of 6 mA.
++ Serial: RX and TX connected to the wireless module socket
++ Serial1: RX1 and TX1
++ Serial2: RX2 and TX2
++ TWI1: SDA1 and SCL1
++ TWI2: SDA2 and SCL2 connected to the wireless module socket
++ SPI1: MOSI1, MISO1, SCK1 and SS1
++ CAN BUS: CANH, CANL, CAN5 and CGND
++ LVDS: CLK+, CLK-, Y0+, Y0-, Y1+, Y1-, Y2+ and Y2-
++ LRST: Stiara reset line (short to GND to reset the processor)
++ BAT
++ BTS
++ BSNS
++ ONOFF
 
 ### Pin Mapping (Sitara)
 
@@ -41,3 +64,5 @@ Testing the Sitara Pins
 | GPIO0\_19   |  126             |
 | GPIO0\_20   |  127             |
 ----------------------------------
+
+
