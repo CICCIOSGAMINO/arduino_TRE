@@ -6,11 +6,11 @@ Testing the Sitara Pins
 
 ### Pin Mapping (Sitara)
 
-| Pin Number  Pin Name  Mapped Pin Name             |            |   |
-|---------------------------------------------------|------------|---|
-| V15  GPIO1_21  96                                 | YELLOW_LED |   |
-| U15  GPIO1_22  97                                 | RED_LED    |   |
-| V16  GPIO1_24  98                                 | GREEN_LED  |   |
+| Pin Name    | Mapped Pin Name  |
+|-------------|------------------|
+| GPIO1\_21   |  96 (YELLOW\_LED)|
+| GPIO1\_22   |  97 (RED\_LED)   |
+| GPIO1\_24   |  98 (GREEN\_LED) |
 | LED_BUILTIN                                       |            |   |
 | T15  GPIO1_23  99                                 | BLUE_LED   |   |
 | U10  GPIO0_22  100 (PWM) T10  GPIO0_23  101 (PWM) |            |   |
