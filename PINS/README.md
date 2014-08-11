@@ -11,31 +11,33 @@ Testing the Sitara Pins
 | GPIO1\_21   |  96 (YELLOW\_LED)|
 | GPIO1\_22   |  97 (RED\_LED)   |
 | GPIO1\_24   |  98 (GREEN\_LED) |
-| LED_BUILTIN                                       |            |   |
-| T15  GPIO1_23  99                                 | BLUE_LED   |   |
-| U10  GPIO0_22  100 (PWM) T10  GPIO0_23  101 (PWM) |            |   |
-| U14  GPIO1_18  102 (PWM)                          |            |   |
-| T14  GPIO1_19  103 (PWM)                          |            |   |
-| U7  GPIO1_0  104                                  |            |   |
-| V7  GPIO1_1  105                                  |            |   |
-| R8  GPIO1_2  106                                  |            |   |
-| T8  GPIO1_3  107                                  |            |   |
-| U8  GPIO1_4  108                                  |            |   |
-| V8  GPIO1_5  109                                  |            |   |
-| R9  GPIO1_6  110                                  |            |   |
-| T9  GPIO1_7  111                                  |            |   |
-| T13  GPIO2_0  112                                 |            |   |
-| U6  GPIO2_4  113                                  |            |   |
-| T7  GPIO2_3  114                                  |            |   |
-| R7  GPIO2_2  115                                  |            |   |
-| T11  GPIO0_26  116                                |            |   |
-| B12  GPIO3_18  117                                |            |   |
-| C13  GPIO3_19  118                                |            |   |
-| D13  GPIO3_20  119                                |            |   |
-| U9  GPIO1_30  120                                 |            |   |
-| V9  GPIO1_31  121                                 |            |   |
-| T12  GPIO1_12  122                                |            |   |
-| R12  GPIO1_13  123                                |            |   |
-| V13  GPIO1_14  124                                |            |   |
-| U13  GPIO1_15  125                                |            |   |
-| A15  GPIO0_19  126 D14  GPIO0_20  127             |            |   |
+| GPIO1\_23   |  99 (BLU\_LED    |
+| GPIO0\_22   |  100 (PWM)       | 
+| GPIO0\_23   |  101 (PWM)       |
+| GPIO1\_18   |  102 (PWM)       |
+| GPIO1\_19   |  103 (PWM)       |
+| GPIO1\_0    |  104             |   
+| GPIO1\_1    |  105             |         
+| GPIO1\_2    |  106             |                     
+| GPIO1\_3    |  107             |                  
+| GPIO1\_4    |  108             |                
+| GPIO1\_5    |  109             |            
+| GPIO1\_6    |  110             |  
+| GPIO1\_7    |  111             |    
+| GPIO2\_0    |  112             |   
+| GPIO2\_4    |  113             |    
+| GPIO2\_3    |  114             |     
+| GPIO2\_2    |  115             |  
+| GPIO0\_26   |  116             |  
+| GPIO3\_18   |  117             |
+| GPIO3\_19   |  118             |   
+| GPIO3\_20   |  119             | 
+| GPIO1\_30   |  120             |  
+| GPIO1\_31   |  121             |   
+| GPIO1\_12   |  122             |
+| GPIO1\_13   |  123             |
+| GPIO1\_14   |  124             |        
+| GPIO1\_15   |  125             |       
+| GPIO0\_19   |  126             |
+| GPIO0\_20   |  127             |
+----------------------------------
