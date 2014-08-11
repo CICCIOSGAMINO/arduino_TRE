@@ -37,7 +37,7 @@ The AVR GPIO pins have enough current capability to drive a typical LED at its m
 ### The sketchs 
 Here we have some sketch to test the GPIO pins on the ArduinoTRE board, the circuits are simple implemented with led,button, potentiometer and buzer. (remember to load the sketch on the Linux Board). 
 
-#### Blink the Led (Digital Output )
+// Blink the Led (Digital Output )
     
     // the setup routine runs once when you press reset:
     void setup() {
