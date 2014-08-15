@@ -188,6 +188,9 @@ When the board is powerd on again the fix is active. How to disable the fix. Ope
 When the board is powerd on again the fix is not active anymore.
 
 
+### Conclusion 
+At the end is a good wify dongle to use with the debian system like the Arduino TRE, 100% with all the function active with no problems ! 
+
 ### more stuff 
 Check the official Debian Wify [guide][1]
 
