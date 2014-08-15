@@ -94,4 +94,9 @@ All Digital GPIO Tested (104-127) LED/BUTTON !
 | GPIO0\_20   |  127             |
 ----------------------------------
 
+
+### Problems 
+
+We sperimented some problems (Arduino TRE beta) to read the value from the GPIO
+
 [1]: http://arduino.cc/en/uploads/Tutorial/ExampleCircuit_bb.png
