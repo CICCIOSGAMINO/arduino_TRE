@@ -15,7 +15,7 @@ Arduino developers get up to 100 times more performance with the Sitara-processo
 
 The Arduino TRE is a Sitara-processor-based Linux Arduino plus a full AVR-based Arduino, while leveraging the simplicity of the Arduino software experience. The integration of the AVR Arduino enables the Arduino TRE to use the existing shield ecosystem so that innovators can expand the Arduino TRE to develop a wide range of high-performance applications such as 3D printers, gateways for building automation and lighting automation, telemetry hubs that collect data from nearby sensors wirelessly, and other connected applications that require host control plus real-time operations.
 
-### BeagleBoard.org
+### Sitara Core 
 
 In addition, the Arduino TRE is partially the result of a close collaboration between Arduino and the BeagleBoard.org foundation. These open hardware pioneers share a passion for expanding open source development and making technology accessible for artists, designers and hobbyists. The TRE design builds upon the experience of both Arduino and BeagleBoard.org, combining the benefits of both community based boards.
 
