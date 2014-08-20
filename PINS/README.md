@@ -1,6 +1,8 @@
 Test the Sitara GPIO pins 
 =========================
 
+### (Under test) 
+
 ### Intro 
 Testing the Sitara Pins, the pins on the Arduino TRE headers have limited current source and sink capability, so special 
 care should be taken when external components are connected to the board. The following notes apply specifically to the header pins connected to the Sitara processor (lower current capability, 3.3V logic), but the same considerations are valid also for the pins connected to the AVR processor (higher current capability, 5V logic). 
