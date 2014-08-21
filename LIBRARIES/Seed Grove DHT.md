@@ -23,7 +23,7 @@ Here some path for find the right things in just a second on the Arduino TRE boa
 + hardware (/usr/src/arduino/hardware )
 + libraries (/usr/src/arduino/libraries ) 
 
-Is a better choice hold the user's and arduino's libraries in differet folder. 
+Is a better choice hold the user's and arduino's libraries in differet folder. Is the same guideline used on the Arduino UNO for easy library setup ! 
 
 ### Import the library on board
 
