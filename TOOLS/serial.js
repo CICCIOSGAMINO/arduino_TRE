@@ -6,7 +6,10 @@
 
 */ 
 
+
+// used for read from console line at line 
 var readline = require('readline');
+// serialport package 
 var serialport = require('serialport');
 var SerialPort = serialport.SerialPort;
 
