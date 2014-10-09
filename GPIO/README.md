@@ -14,8 +14,8 @@ Basically if you want to work with a particular GPIO you must first to reserve i
 
 From the user level side this "operation" for reserve the GPIO is called "export" the GPIO. For make this export operation you simply need to echo the GPIO number you are interested to a special path as follow (change XX with the GPIO number you need):
 
-echo XX > /sys/class/gpio/export
+    echo XX > /sys/class/gpio/export
 
 If operation successful (the possible case of operation failed is explained below) a new "folder" will show up in the GPIO interface path as example below:
 
-/sys/class/gpio/gpioXX/
+    /sys/class/gpio/gpioXX/
