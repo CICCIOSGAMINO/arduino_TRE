@@ -52,4 +52,17 @@ Now you can load the image on the microSD on  **/dev/sdb**  with the use of the 
 Now you are ready to use the Arduino TRE with the new image 0.0.10 ! 
 
 ### USB Fix 
-If you use an Arduino TRE beta board remember to fix the USB problem with the USB_fix, reported in this repo. 
+If you use an Arduino TRE beta board remember to fix the USB problem with the USB_fix, reported in this repo : 
+
+	https://github.com/CICCIOSGAMINO/arduino_TRE/tree/master/USB_Fix
+	
+	
+### Last Things 
+Before start with the sketchs, some little operation to make sure all is on the right way, update the systems 
+packages, and the packages from the Arduino packages manager  : 
+
+	http://localhost/update 
+	
+
+
+	
