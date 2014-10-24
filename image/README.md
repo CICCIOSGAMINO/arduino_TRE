@@ -6,6 +6,9 @@ This guide you througth the main steps to install a new image for your Arduino T
 sometimes importants update are delivered with the new images, check it out ! 
 
 ### Download 
+You can find the images (.img.xz) files in the arduino_tre_images repository on my profile : 
+
+	
 
 ### Check md5sum 
 
@@ -29,8 +32,11 @@ After that you need to find the microSD where the image of the Arduino TRE is ho
 	  umount /dev/sdb*  
 	  
 ### Load on microSD
-
-after that you can load the image on the **sdb**  with the use of the dd command : 
+Now you can load the image on the microSD on  **/dev/sdb**  with the use of the dd command : 
 
 	 sudo dd if=arduinotre-debian-0.0.10.img of=/dev/sdb bs=4M conv=fsync
 
+Now you are ready to use the Arduino TRE with the new image 0.0.10 ! 
+
+### USB Fix 
+If you use an Arduino TRE beta board remember to fix the USB problem with the USB_fix, reported in this repo. 
