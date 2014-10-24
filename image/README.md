@@ -15,7 +15,7 @@ In terms of integrity, an MD5 hash comparison detects changes in files that woul
 
 To get the md5sum of the image file : 
 
-	md5sum arduinotre-debian-0.0.10.img.xz 
+	$ md5sum arduinotre-debian-0.0.10.img.xz 
 	9f8c40204e7d99d9970a07973ea9279a
 	
 If the code that you give from the command is the same of the code give you from a trusted authority you have 
@@ -28,13 +28,13 @@ check on the official Arduino website for compare the codes!
 ### Extract 
 xz is the best compression method for the Linux .img (Kernel ecc ) to exctract : 
 
-    unxz arduinotre-debian-0.0.10.img.xz 
+    	$ unxz arduinotre-debian-0.0.10.img.xz 
 
 ### Find the SD
 After that you need to find the microSD where the image of the Arduino TRE is host, the common name for this kind of storage in Linux environment is sdb* , when you find it umount(if mounted) : 
 
-  	lsblk 
-  	ls -la /dev/sdb* 
+  	$ lsblk 
+  	$ ls -la /dev/sdb* 
   	....
   		sdb       8:16   1   7,3G  0 disk 
   	├─sdb1    8:17   1    96M  0 part / ../Board_Boot
@@ -42,12 +42,12 @@ After that you need to find the microSD where the image of the Arduino TRE is ho
   	└─sdb3    8:19   1   6,9G  0 part /../Debian
   	sr0      11:0    1  1024M  0 rom  
 	
-	  umount /dev/sdb*  
+	$ umount /dev/sdb*  
 	  
 ### Load on microSD
 Now you can load the image on the microSD on  **/dev/sdb**  with the use of the dd command : 
 
-	 sudo dd if=arduinotre-debian-0.0.10.img of=/dev/sdb bs=4M conv=fsync
+	 $ sudo dd if=arduinotre-debian-0.0.10.img of=/dev/sdb bs=4M conv=fsync
 
 Now you are ready to use the Arduino TRE with the new image 0.0.10 ! 
 
@@ -63,6 +63,16 @@ packages, and the packages from the Arduino packages manager  :
 
 	http://localhost/update 
 	
+In beta version the default locale is US and the keypad with the us layout, to change to italian keyboard : 
+
+	$ apt-get install console-data keyboard-configuration
+	$ dpkg-reconfigure console-data
+	$ dpkg-reconfigure keyboard-configuration
+	$ service keyboard-setup restart
+	
+To apply new settings, restarting the keyboard-setup service should suffice, otherwise you can try to restart kernel input system via udev:
+
+	$ udevadm trigger --subsystem-match=input --action=change
 
 
 	
