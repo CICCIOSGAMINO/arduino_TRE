@@ -6,11 +6,24 @@ This guide you througth the main steps to install a new image for your Arduino T
 sometimes importants update are delivered with the new images, check it out ! 
 
 ### Download 
-You can find the images (.img.xz) files in the arduino_tre_images repository on my profile : 
+You can find the images (.img.xz) files in the arduino_tre_images repository on my profile :
 
-	
+	https://github.com/CICCIOSGAMINO/arduino_TRE/edit/master/image/README.md
 
 ### Check md5sum 
+In terms of integrity, an MD5 hash comparison detects changes in files that would cause errors. The possibility of changes (errors) is proportional to the size of the file; the possibility of errors increase as the file becomes larger. It is a very good idea to run an MD5 hash comparison check when you have a file like an operating system install CD that has to be 100% correct. 
+
+To get the md5sum of the image file : 
+
+	md5sum arduinotre-debian-0.0.10.img.xz 
+	9f8c40204e7d99d9970a07973ea9279a
+	
+If the code that you give from the command is the same of the code give you from a trusted authority you have 
+the right file, and are you ready to install the new image. 
+
+Check in the folder with the image for see the md5sum for every version, but i'm not the trusted authority 
+check on the official Arduino website for compare the codes! 
+
 
 ### Extract 
 xz is the best compression method for the Linux .img (Kernel ecc ) to exctract : 
