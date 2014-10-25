@@ -8,7 +8,7 @@ sometimes importants update are delivered with the new images, check it out !
 ### Download 
 You can find the images (.img.xz) files in the arduino_tre_images repository on my profile :
 
-+ [arduinotre-debian-0.0.10.img.xz][1] md5sum 9f8c40204e7d99d9970a07973ea9279a
++ [arduinotre-debian-0.0.10.img.xz][1]  |  md5sum:9f8c40204e7d99d9970a07973ea9279a
 
 ### Check md5sum 
 In terms of integrity, an MD5 hash comparison detects changes in files that would cause errors. The possibility of changes (errors) is proportional to the size of the file; the possibility of errors increase as the file becomes larger. It is a very good idea to run an MD5 hash comparison check when you have a file like an operating system install CD that has to be 100% correct. 
@@ -58,12 +58,25 @@ If you use an Arduino TRE beta board remember to fix the USB problem with the US
 	
 	
 ### Last Things 
-Before start with the sketchs, some little operation to make sure all is on the right way, update the systems 
-packages, and the packages from the Arduino packages manager  : 
+Before start with the sketchs, some little operation to make sure all is on the right way. 
+
+#### Update 
+Update the systems packages, and the packages from the Arduino packages manager  : 
 
 	http://localhost/update 
+
+#### Timezone 
+If you want set the timezone, run this command from ssh or LXterminal in Arduino TRE environment : 
+
+	dpkg reconfigure tzdata
 	
-In beta version the default locale is US and the keypad with the us layout, to change to italian keyboard : 
+#### Date 
+Set the right date, this is the easy option : 
+
+	date --set "Sat Oct  25 14:03:50 CEST 2014"
+	
+#### Set the Keyboard 
+If you need to set the kwyboard on your default layout : 
 
 	$ apt-get install console-data keyboard-configuration
 	$ dpkg-reconfigure console-data
@@ -73,8 +86,6 @@ In beta version the default locale is US and the keypad with the us layout, to c
 To apply new settings, restarting the keyboard-setup service should suffice, otherwise you can try to restart kernel input system via udev:
 
 	$ udevadm trigger --subsystem-match=input --action=change
-
-
 	
 ### Link 
 [1]:https://www.dropbox.com/s/8qib17tuas9b1fl/arduinotre-debian-0.0.10.img.xz?dl=0
