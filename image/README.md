@@ -64,6 +64,8 @@ Before start with the sketchs, some little operation to make sure all is on the 
 Update the systems packages, and the packages from the Arduino packages manager  : 
 
 	http://localhost/update 
+	
+I'm not sure, but seems that the beta version 0.0.10 do not like this operation !! 
 
 #### Timezone 
 If you want set the timezone, run this command from ssh or LXterminal in Arduino TRE environment : 
