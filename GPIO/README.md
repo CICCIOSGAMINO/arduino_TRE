@@ -19,3 +19,8 @@ From the user level side this "operation" for reserve the GPIO is called "export
 If operation successful (the possible case of operation failed is explained below) a new "folder" will show up in the GPIO interface path as example below:
 
     /sys/class/gpio/gpioXX/
+    
+    
+### Sketch 
+
+TODO 
