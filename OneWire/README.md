@@ -1,8 +1,12 @@
-OneWire
-=======
+OneWire - Arduino Tre 
+=====================
 [TOC]
 
 ## Intro
+The main idea is that all the library can be used for the Arduino UNO can be used for the Arduino TRE too, 
+for all the main library is right, one of them is the OneWire library. For the Official Arduino 
+reference to the material go [here][1].
+
 OneWire lets you access 1-wire devices made by Maxim/Dallas, such as temperature
 sensors and ibutton secure memory. For temperature sensors, the DallasTemperature
 library can be used with this library :
@@ -15,10 +19,18 @@ volts. Then just connect each 1-wire device to the pin and ground. Some 1-wire
 devices can also connect to power, or get their power from the signal wire.
 Please refer to the specifications for the 1-wire devices you are using
 
-### Basic Usage
-Basic Usage
+## Install the Library 
+To install the library on the Arduino Tre download the Library and copy the unzip folder in the 
+user library (the path that you set in the IDE for the user's sketch and the libraries) after 
+that try to restart the IDE and check if the examples of the new library are present in the 
+examples folder of the IDE, if you can find the example all work and now you are able to 
+use the library in the sketchs. 
 
-OneWire myWire(pin)
+### Basic Usage
+Here the simple functions you can use with the OneWire library :
+
+    OneWire myWire(pin)
+    
 Create the OneWire object, using a specific pin. Even though you can connect
 many 1 wire devices to the same pin, if you have a large number, smaller groups
 each on their own pin can help isolate wiring problems. You can create multiple
@@ -44,7 +56,7 @@ Select a device based on its address. After a reset, this is needed to choose
 which device you will use, and then all communication will be with that device,
 until another reset.
 
-  myWire.skip()
+    myWire.skip()
 
 Skip the device selection. This only works if you have a single device, but you
 can avoid searching and use this to immediatly access your device.
@@ -153,9 +165,6 @@ This factor is really just an artifact of inefficient coding for 1Wire read proc
 For discussion and code examples on this topic, please go [here].
 
 
-
-
-
-
+[1]:http://playground.arduino.cc/Learning/OneWire
 [2]:http://www.pjrc.com/teensy/arduino_libraries/OneWire.zip
 [3]:http://www.cupidcontrols.com/2014/10/moteino-arduino-and-1wire-optimize-your-read-for-speed/
