@@ -157,7 +157,7 @@ The majority of existing code for 1Wire devices, particularly that written for A
 Arguably the biggest problem with using the above methodology is that unless threading measures are undertaken, the device must sit (hang) and wait for the conversion to take place if a hardcoded wait time is included. This presents a serious problem if other timed processes exist, and even if they don't -- many programs wait for user input, process data, and perform many other functions that cannot be put on hold for the time necessary for a temperature conversion process. As noted above and below, a 12-bit conversion process for a DS18B20 can take as long as 750ms. There is simply no reason to use this method except laziness. One can issue a conversion command and return later to pick up the measurement with a Read Scratchpad command.
 
 #### Scaling for Poll Speed with multiple devices
-Another major problem with the "Convert, Wait, Read" method is that it scales very poorly, and for no good reason. All conversion commands can be issued in series (or simultaneously, by issuing a Skip ROM and then Convert command), and the result can then be read back in succession. See discussion here: http://interfaceinnovations.org/onewireoptimization.html
+Another major problem with the "Convert, Wait, Read" method is that it scales very poorly, and for no good reason. All conversion commands can be issued in series (or simultaneously, by issuing a Skip ROM and then Convert command), and the result can then be read back in succession. See discussion [here][4].
 
 #### Adjustment of wait time to required conversion time
 This factor is really just an artifact of inefficient coding for 1Wire read processes. Typically, at best code is written with the maximum required conversion time listed in the data sheet, and often with a GENEROUS overhead on top of this. In the example below, for example, 1000ms is given, while the datasheet lists 750ms as the maximum conversion time, and typical conversion takes please is 625ms or less. Furthermore, the value should be adjusted for the resolution that is currently being polled. A 9-bit conversion, for example, will take 94ms or less, and waiting for 1000ms simply doesn't make sense. As noted above, the most efficient way to poll is the use a read time slot to poll the device. In this fashion one can know exactly when the result is ready and pick it up immediately.
@@ -168,3 +168,4 @@ For discussion and code examples on this topic, please go [here].
 [1]:http://playground.arduino.cc/Learning/OneWire
 [2]:http://www.pjrc.com/teensy/arduino_libraries/OneWire.zip
 [3]:http://www.cupidcontrols.com/2014/10/moteino-arduino-and-1wire-optimize-your-read-for-speed/
+[4]:http://interfaceinnovations.org/onewireoptimization.html
