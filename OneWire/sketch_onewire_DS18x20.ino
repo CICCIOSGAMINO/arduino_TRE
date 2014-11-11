@@ -11,6 +11,9 @@
        
    See the README.md file for a brief reference to the functions of 
    the OneWire library. 
+   
+   Author : Canali Marco 
+   Date : 11/11/2014
 
 */ 
 
