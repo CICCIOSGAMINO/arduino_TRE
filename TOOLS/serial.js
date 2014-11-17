@@ -1,5 +1,7 @@
 /* 
   simple serial app for serial communication in Node.js 
+  very useful to comm with the Arduino Tre on Serial Port 
+  
   Packages : readline, serialport 
   
   node app.js /dev/ttyUSB0 9600  (default are /dev/ttyACM0 9600)
