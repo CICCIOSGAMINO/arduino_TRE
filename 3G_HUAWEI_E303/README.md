@@ -3,9 +3,9 @@
 
 ###Intro 
 
-The Huawei E220 is a Huawei HSDPA access device (modem) manufactured by Huawei and notable for using the USB interface (USB modem), the device is used for wireless Internet access using 3.5G, 3G, or 2G mobile telephony networks. It supports UMTS (including HSDPA), EDGE, GPRS and GSM.
+The Huawei E303 is a Huawei HSDPA access device (modem) manufactured by Huawei and notable for using the USB interface (USB modem), the device is used for wireless Internet access using 3.5G, 3G, or 2G mobile telephony networks. It supports UMTS (including HSDPA), EDGE, GPRS and GSM.
 
-E220 works well with Linux, as support for it was added in Linux kernel 2.6.20 (2007-02-04[2]), but there are workarounds for distributions with older kernels. The card is also supported by Vodafone Mobile Connect Card driver for Linux, and it is possible to monitor the signal strength through other Linux applications!
+E303 works well with Linux, as support for it was added in Linux kernel 2.6.20 (2007-02-04[2]), but there are workarounds for distributions with older kernels. The card is also supported by Vodafone Mobile Connect Card driver for Linux, and it is possible to monitor the signal strength through other Linux applications!
 
 ### System on Test
 All the scripts are tested with : 
