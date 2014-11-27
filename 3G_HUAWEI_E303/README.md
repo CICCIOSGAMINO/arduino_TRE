@@ -146,6 +146,6 @@ When the board is powerd on again the fix is not active anymore.
 
 
 ### more stuff 
-Check the official Debian E220 [guide][1]
+Check the official Debian E303 [guide][1]
 
-[1]: https://wiki.debian.org/Huawei/E220
+[1]: https://wiki.debian.org/Huawei/E303
