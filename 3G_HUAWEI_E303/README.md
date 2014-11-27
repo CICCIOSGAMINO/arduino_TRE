@@ -13,7 +13,7 @@ All the scripts are tested with :
 + Arduino TRE beta testing version (T00000023)
 + Samsung microSD 8GB
 + Linux xx-K56CM 3.13.0-32-generic #57-Ubuntu SMP Tue Jul 15 03:51:08 UTC 2014 x86_64 x86_64 x86_64 GNU/Linux
-+ Huawei E220 3G modem (3 Sim Card)
++ Huawei E303 3G modem (3 Sim Card)
 
 
 ### Attach the Device 
