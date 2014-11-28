@@ -23,4 +23,4 @@ If operation successful (the possible case of operation failed is explained belo
     
 ### Sketch 
 
-TODO 
+Test the GPIO on Sitara 
