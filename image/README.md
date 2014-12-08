@@ -11,7 +11,7 @@ on the different images are valid only for the different version deliver publicy
 You can find the images (.img.xz) files in the arduino_tre_images repository on my profile :
 
 + [arduinotre-debian-0.0.10.img.xz][1]  |  md5sum:9f8c40204e7d99d9970a07973ea9279a
-+ [arduinotre-debian-2014-12-01-2222-8gb.img.xz]  |  md5sum:52d8d63cf8e1f0e569af672e7535805d
++ [arduinotre-debian-2014-12-01-2222-8gb.img.xz][2]  |  md5sum:52d8d63cf8e1f0e569af672e7535805d
 
 ### Check md5sum 
 In terms of integrity, an MD5 hash comparison detects changes in files that would cause errors. The possibility of changes (errors) is proportional to the size of the file; the possibility of errors increase as the file becomes larger. It is a very good idea to run an MD5 hash comparison check when you have a file like an operating system install CD that has to be 100% correct. 
