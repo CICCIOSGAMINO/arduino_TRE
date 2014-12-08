@@ -4,11 +4,14 @@ How to install new .img
 ### Intro 
 This guide you througth the main steps to install a new image for your Arduino TRE board, 
 sometimes importants update are delivered with the new images, check it out ! 
+Use the last image is the right thing, the improvment is very fast on it during the betatesting, so the review 
+on the different images are valid only for the different version deliver publicy. 
 
 ### Download 
 You can find the images (.img.xz) files in the arduino_tre_images repository on my profile :
 
 + [arduinotre-debian-0.0.10.img.xz][1]  |  md5sum:9f8c40204e7d99d9970a07973ea9279a
++ [arduinotre-debian-2014-12-01-2222-8gb.img.xz]  |  
 
 ### Check md5sum 
 In terms of integrity, an MD5 hash comparison detects changes in files that would cause errors. The possibility of changes (errors) is proportional to the size of the file; the possibility of errors increase as the file becomes larger. It is a very good idea to run an MD5 hash comparison check when you have a file like an operating system install CD that has to be 100% correct. 
@@ -91,3 +94,4 @@ To apply new settings, restarting the keyboard-setup service should suffice, oth
 	
 ### Link 
 [1]:https://www.dropbox.com/s/8qib17tuas9b1fl/arduinotre-debian-0.0.10.img.xz?dl=0
+[2]:https://www.dropbox.com/s/kc2w6bd2ku0jdh6/tre-debian-2014-12-01-2222-8gb.img.xz?dl=0
