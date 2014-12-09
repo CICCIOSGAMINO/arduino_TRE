@@ -55,7 +55,7 @@ Now you can load the image on the microSD on  **/dev/sdb**  with the use of the 
 
 	 $ sudo dd if=arduinotre-debian-0.0.10.img of=/dev/sdb bs=4M conv=fsync
 
-Now you are ready to use the Arduino TRE with the new image 0.0.10 ! 
+Now you are ready to use the Arduino TRE with the new image ! 
 
 ### USB Fix 
 If you use an Arduino TRE beta board remember to fix the USB problem with the USB_fix, reported in this repo : 
