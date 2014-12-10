@@ -7,6 +7,8 @@ sometimes importants update are delivered with the new images, check it out !
 Use the last image is the right thing, the improvment is very fast on it during the betatesting, so the review 
 on the different images are valid only for the different version deliver publicy. 
 
+Last release is the arduinotre-debian-2014-12-01-2222-8gb.img.xz  03/12/2014 
+
 ### Download 
 You can find the images (.img.xz) files in the arduino_tre_images repository on my profile :
 
