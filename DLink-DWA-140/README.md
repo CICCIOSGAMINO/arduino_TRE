@@ -95,6 +95,31 @@ setting is request(in the following section) :
                               18 Mb/s; 36 Mb/s; 54 Mb/s
                     Bit Rates:6 Mb/s; 12 Mb/s; 24 Mb/s; 48 Mb/s
                     Mode:Master
+                    
+Other useful command to run on the wireless card to check the function mode for working with them is, the 
+iwlist command -> Get more detailed wireless information from a wireless interface
+: 
+
+    $ iwlist 
+    
+    Usage: iwlist [interface] scanning [essid NNN] [last]
+              [interface] frequency 
+              [interface] channel 
+              [interface] bitrate 
+              [interface] rate 
+              [interface] encryption 
+              [interface] keys 
+              [interface] power 
+              [interface] txpower 
+              [interface] retry 
+              [interface] ap 
+              [interface] accesspoints 
+              [interface] peers 
+              [interface] event 
+              [interface] auth 
+              [interface] wpakeys 
+              [interface] genie 
+              [interface] modulation
 
 
 Now edit **/etc/network/interfaces**. The required configuration is much dependent on your particular setup. See the following example to get an idea of how it works : 
@@ -108,6 +133,9 @@ Simple for a free "FREE-NET" net, with no passw and dhcp active :
         wireless-mode managed
         
     ifconfig wlan0 up        // more low level than ifup 
+    
+or 
+
     ifdown wlan0
     ifup wlan0 
     
@@ -129,13 +157,11 @@ Seems to be all good, the network wlan0 get the rigth address from the gateway !
 ### utility
 
 
-    /etc/init.d/networking restart              // restart the net-interfaces
+    /etc/init.d/networking restart              // restart all the net-interfaces (deprecated)
     ifconfig wlan0 up                           // up the interface wlan0  more low level than ifup 
     ifup wlan0                                  // up the wlan0 
     ifdown wlan0                                // down the wlan0
-
     
-
 
 ### DNS
 
