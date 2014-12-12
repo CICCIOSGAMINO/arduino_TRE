@@ -59,6 +59,16 @@ Now you can load the image on the microSD on  **/dev/sdb**  with the use of the 
 
 Now you are ready to use the Arduino TRE with the new image ! 
 
+### ssh Login 
+The default details for login in the image arduinotre-debian-0.0.10.img.xz is without passw : 
+
+	ssh root@192.168.7.2 
+	
+for the image md5sum arduinotre-debian-2014-12-01-2222-8gb.img.xz  :
+
+	ssh arduinotre@19.168.7.2 
+	ssh root@192.168.7.2 
+
 ### USB Fix 
 If you use an Arduino TRE beta board remember to fix the USB problem with the USB_fix, reported in this repo : 
 
