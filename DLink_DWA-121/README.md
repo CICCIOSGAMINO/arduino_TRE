@@ -71,7 +71,9 @@ Set the /etc/network/interfaces :
 Uo the interface wlan0 
 
     ifconfig wlan0 up       // up the interface more low level than ifup 
-    ifup wlan0              // up the interface 
+    ifconfig wlan0 down     // down the interface more low levelt than ifdown 
+    
+On the Debian environment is better use these commands than the ifup / ifdown command ! 
     
 ### Config with wpa_supplicant
 
