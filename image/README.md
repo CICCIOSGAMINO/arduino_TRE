@@ -64,10 +64,15 @@ The default details for login in the image arduinotre-debian-0.0.10.img.xz is wi
 
 	ssh root@192.168.7.2 
 	
-for the image md5sum arduinotre-debian-2014-12-01-2222-8gb.img.xz  :
+for the image md5sum arduinotre-debian-2014-12-01-2222-8gb.img.xz first of all set the user password 
+in the IDE connect through browser at 192.168.7.2 if connected by USB cable or at the Network address 
+if connected by LAN, set the password example "BOOMTRE" when you are done you can connect through ssh:
 
 	ssh arduinotre@19.168.7.2 
-	ssh root@192.168.7.2 
+	> password: BOOMTRE 
+	
+The root access is disable for security reason, but you can connect to with arduinotre user and sudos
+your commands ! 
 
 ### USB Fix 
 If you use an Arduino TRE beta board remember to fix the USB problem with the USB_fix, reported in this repo : 
