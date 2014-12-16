@@ -69,7 +69,7 @@ for the image md5sum arduinotre-debian-2014-12-01-2222-8gb.img.xz first of all s
 in the IDE connect through browser at 192.168.7.2 if connected by USB cable or at the Network address 
 if connected by LAN, set the password example "BOOMTRE" when you are done you can connect through ssh:
 
-	ssh arduinotre@19.168.7.2 
+	ssh arduinotre@192.168.7.2 
 	> password: BOOMTRE 
 	
 The root access is disable for security reason, but you can connect to with arduinotre user and sudos
