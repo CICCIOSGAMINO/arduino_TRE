@@ -85,6 +85,14 @@ Uo the interface wlan0
     ifconfig wlan0 down     // down the interface more low levelt than ifdown 
     
 On the Debian environment is better use these commands than the ifup / ifdown command ! 
+
+### DNS
+Check if the DNS server address are setted/resolved by the interface : 
+
+    /etc/resolv.conf
+    
+    nameserver 212.29.129.3
+    nameserver 8.8.8.8
     
 ### Config with wpa_supplicant
 
