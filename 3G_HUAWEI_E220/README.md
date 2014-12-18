@@ -66,6 +66,16 @@ When WvDial starts, it first loads its configuration from /etc/wvdial.conf and ~
 Now that the wvdial 'Dial E220' is setted on ppp0 interface, launch the interface : 
 
     wvdial E220                 // launch the E220 interface on ppp0 
+    
+    
+### Set the Interface 
+To set the interfaces go to the interfaces file in **/etc/network/interfaces** and if you need set 
+the params for the ppp0 (peer-to-peer) interface like all the others interfaces : 
+
+    # ppp0 interface (peer-to-peer) 
+    auto ppp0
+    iface ppp0 inet wvdial
+    provider E220-WIND 
 
 ### Check the ppp0 
 Check the interface ppp0 just setted on Huawei E220 modem with the ifconfig command: 
