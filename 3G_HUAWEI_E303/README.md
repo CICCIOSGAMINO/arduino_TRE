@@ -37,7 +37,7 @@ With all the USB active connect the 3G modem trougth USB hub, and if the USB mod
 The device is recognized, the name and the corresponded drivers match our device. If the drivers don't match the device go deep in the installation drivers process, You can use modconf to load usbserial drivers with card vendor & id as arguments. 
 
     
-**Arduino TRE mount a Debian GNU/Linux distro and do not need to manually install the Huawei modem drivers, a lot of drivers are native implemented** 
+**Arduino TRE mount a Debian GNU/Linux distro and do not need to manually install the Huawei modem drivers, a lot of drivers are already implemented, if you need to install the driver check the online debian doc** 
 
 ### wvdial 
 WvDial is a utility that helps in making modem-based connections to the Internet that is included in some important Linux distributions.
