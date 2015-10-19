@@ -11,10 +11,10 @@ Beta relase  - arduinotre-debian-0.0.10.img.xz 05/06/2014
 Last release - arduinotre-debian-2014-12-01-2222-8gb.img.xz  03/12/2014 
 
 ### Download 
-You can find the images (.img.xz) files in the arduino_tre_images repository on my profile (Not Available for the moment) :
+You can find the images (.img.xz) files in the arduino_tre_images repository on dropbox here :
 
-+ [arduinotre-debian-0.0.10.img.xz]  |  md5sum:9f8c40204e7d99d9970a07973ea9279a
-+ [arduinotre-debian-2014-12-01-2222-8gb.img.xz]  |  md5sum:52d8d63cf8e1f0e569af672e7535805d
++ [arduinotre-debian-0.0.10.img.xz][1]  |  md5sum:9f8c40204e7d99d9970a07973ea9279a
++ [arduinotre-debian-2014-12-01-2222-8gb.img.xz][2]  |  md5sum:52d8d63cf8e1f0e569af672e7535805d
 
 ### Check md5sum 
 In terms of integrity, an MD5 hash comparison detects changes in files that would cause errors. The possibility of changes (errors) is proportional to the size of the file; the possibility of errors increase as the file becomes larger. It is a very good idea to run an MD5 hash comparison check when you have a file like an operating system install CD that has to be 100% correct. 
@@ -113,3 +113,6 @@ To apply new settings, restarting the keyboard-setup service should suffice, oth
 
 	$ udevadm trigger --subsystem-match=input --action=change
 
+### Links 
+[1]:https://www.dropbox.com/s/8qib17tuas9b1fl/arduinotre-debian-0.0.10.img.xz?dl=0
+[2]:https://www.dropbox.com/s/kc2w6bd2ku0jdh6/tre-debian-2014-12-01-2222-8gb.img.xz?dl=0
