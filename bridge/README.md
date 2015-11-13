@@ -23,8 +23,7 @@ Arduino Yun schema :
 
 ![Bridge Schema](https://www.arduino.cc/en/uploads/Main/BridgeInShort.png)
     
-Before start go deep in the Bridge library we can check is the the bridge process is up, the process is activate 
-at the system boot. 
+
 
 ### Bridge Library 
 The bridge library on both the seide of the board (Sitara and Atmel) offers the following interfaces : 
@@ -37,5 +36,5 @@ The bridge library on both the seide of the board (Sitara and Atmel) offers the 
 + YunClient : emulates a TCP connection to an arbitrary host/port via the bridge.
 + YunServer : Arduino-based HTTP server
 
-![Bridge detailed schema](https://www.arduino.cc/en/uploads/Main/BridgeInShort.png)
+![Bridge detailed schema](http://googledrive.com/host/0B81i049MUE-9fjV6WkIxQXNQZWRLYzdqSWl2RkJ6MjZPMFJCNGVYVzlLT1lGRkxQTGJmSjQ/schema/arduino-bridge.png)
 
