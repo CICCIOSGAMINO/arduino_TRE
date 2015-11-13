@@ -30,4 +30,12 @@ at the system boot.
 The bridge library on both the seide of the board (Sitara and Atmel) offers the following interfaces : 
 
 + Process : Can launch process on the Linux processor (eg shell scripts) and read their outputs
-+ 
++ Console : Replace the Serial communication library, as i can telnet to the console to interact to sketch over the network, or dedug the sketch output
++ FileIO : Interface to Linux file system, used to read/write file on SD and other storage in the file system
++ HTTPClient : creates an HTTP Client on Linux 
++ Mailbox : is a sessionless interface to a volatile key/value store.
++ YunClient : emulates a TCP connection to an arbitrary host/port via the bridge.
++ YunServer : Arduino-based HTTP server
+
+![Bridge detailed schema](https://www.arduino.cc/en/uploads/Main/BridgeInShort.png)
+
