@@ -38,3 +38,12 @@ The bridge library on both the seide of the board (Sitara and Atmel) offers the 
 
 ![Bridge detailed schema](http://googledrive.com/host/0B81i049MUE-9fjV6WkIxQXNQZWRLYzdqSWl2RkJ6MjZPMFJCNGVYVzlLT1lGRkxQTGJmSjQ/schema/arduino-bridge.png)
 
+You need to be confortable with the Bridge functionality because all the communications pass through them, so in the next chapters we'll try to go depth in these functions ! 
+
+### Bridge Active
+As soon as your Arduino sketch uses one of the Bridge classes, the board (Atmel 32u4) invokes run-bridge (/usr/bin) via serial on the Linux side. Console also uses bridge, as do FileIO, etc. For example, FileIO instructs bridge to create a file by sending an Fx command, where x is the mode with which to open the file (r, w, a). Command g performs a write() via the bridge, s does a seek(2), f a close(2), etc. The Mailbox class also uses bridge with different commands (m is readMessage(), M is writeMessage(), J is writeJSON()).
+
+run-bridge is a shell script which invokes python bridge.py from /usr/lib/python2.7/bridge. On the one hand, that is good news because we can modify how it works. On the other hand that's bad news for the same reason imagine not being able to rely on how a sketch communicates with the outside world.
+
+Be that as it may, the following small sketch (Arduino side) sends a bit of data to Linino (the OpenWRT/Linux portion of the board) every 200ms:
+
