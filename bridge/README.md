@@ -52,9 +52,23 @@ Check the process active on the TCP port :
     >> dnsmasq    1360 nobody    4u  inet   2010      0t0  UDP *:domain 
     >> dnsmasq    1360 nobody    5u  inet   2011      0t0  TCP *:domain (LISTEN)
     >> avahi-dae  1366 nobody   12u  inet   2055      0t0  UDP *:mdns 
-    >> dropbear   4652   root    5u  inet   5652      0t0  TCP 192.168.1.108:ssh->192.168.1.101:47890 (ESTABLISHED)
+    >> dropbear   4652   root    5u  inet   5652      0t0  TCP 19 ..1:47890 (ESTABLISHED)
     >> python    11888   root    4u  inet  13162      0t0  TCP localhost:6571 (LISTEN)
     >> python    11888   root    5u  inet  13163      0t0  TCP localhost:5700 (LISTEN)
+    
+    netstat -tulpn
+    >> Active Internet connections (only servers)
+    >> Proto Recv-Q Send-Q Local Address           Foreign Address         State       PID/Program name    
+    >> tcp        0      0 127.0.0.1:5700          0.0.0.0:*               LISTEN      11888/python
+    >> tcp        0      0 127.0.0.1:6571          0.0.0.0:*               LISTEN      11888/python
+    >> tcp        0      0 0.0.0.0:80              0.0.0.0:*               LISTEN      1328/uhttpd
+    >> tcp        0      0 0.0.0.0:53              0.0.0.0:*               LISTEN      1360/dnsmasq
+    >> tcp        0      0 0.0.0.0:22              0.0.0.0:*               LISTEN      1321/dropbear
+    >> tcp        0      0 0.0.0.0:443             0.0.0.0:*               LISTEN      1328/uhttpd
+    >> netstat: /proc/net/tcp6: No such file or directory
+    >> udp        0      0 0.0.0.0:53              0.0.0.0:*                           1360/dnsmasq
+    >> udp        0      0 0.0.0.0:5353            0.0.0.0:*                           1366/avahi-daemon: 
+netstat: /proc/net/udp6: No such file or directory
     
 as you can see, after the sketch launche the bridge, the python listening on port 6571 and 5700 ! So now we can go to view what kind of data are in back and forward on the serial ! 
 
