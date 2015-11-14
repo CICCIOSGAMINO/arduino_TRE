@@ -38,7 +38,7 @@ The bridge library on both the seide of the board (Sitara and Atmel) offers the 
 
 ![Bridge detailed schema](http://googledrive.com/host/0B81i049MUE-9fjV6WkIxQXNQZWRLYzdqSWl2RkJ6MjZPMFJCNGVYVzlLT1lGRkxQTGJmSjQ/schema/arduino-bridge.png)
 
-You need to be confortable with the Bridge functionality because all the communications pass through them, so in the next chapters we'll try to go depth in these functions ! 
+You need to be confortable with the Bridge functionality because all the communications pass through them, so in the next chapters we'll try to go depth in these functions ! For all the official documentation about the bridge on the Arduino Yun (pretty the same for the Arduino TRE) here the [link][2]. 
 
 ### Bridge Active
 As soon as your Arduino sketch uses one of the Bridge classes, the board (Atmel 32u4) invokes run-bridge (/usr/bin) via serial on the Linux side. Console also uses bridge, as do FileIO, Mailbox etc. So **run-bridge** is a shell script which invokes python bridge.py from /usr/lib/python2.7/bridge. 
@@ -69,14 +69,13 @@ Check the process active on the TCP port :
     >> udp        0      0 0.0.0.0:53              0.0.0.0:*                     1360/dnsmasq
     >> udp        0      0 0.0.0.0:5353            0.0.0.0:*                     1366/avahi-daemon:
     
-as you can see, after the sketch launche the bridge, the python listening on port 6571 and 5700 ! So now we can go to view what kind of data are in back and forward on the serial ! 
+as you can see, after the sketch launche the bridge, the python listening on port 6571 and 5700 ! So now we can go to view what kind of data are in back and forward on the serial wrapped into the Bridge libraries. 
 
 
 
 
 
-### Mailbox FileIO
-For example, FileIO instructs bridge to create a file by sending an Fx command, where x is the mode with which to open the file (r, w, a). Command g performs a write() via the bridge, s does a seek(2), f a close(2), etc. The Mailbox class also uses bridge with different commands (m is readMessage(), M is writeMessage(), J is writeJSON()).
+### Bridge - Mailbox 
+The Mailbox
 
-Be that as it may, the following small sketch (Arduino side) sends a bit of data to Linino (the OpenWRT/Linux portion of the board) every 200ms:
-
+[2]:https://blog.arduino.cc/2013/09/05/hands-on-the-arduino-yuns-bridge/
