@@ -41,9 +41,26 @@ The bridge library on both the seide of the board (Sitara and Atmel) offers the 
 You need to be confortable with the Bridge functionality because all the communications pass through them, so in the next chapters we'll try to go depth in these functions ! 
 
 ### Bridge Active
-As soon as your Arduino sketch uses one of the Bridge classes, the board (Atmel 32u4) invokes run-bridge (/usr/bin) via serial on the Linux side. Console also uses bridge, as do FileIO, Mailbox etc. 
+As soon as your Arduino sketch uses one of the Bridge classes, the board (Atmel 32u4) invokes run-bridge (/usr/bin) via serial on the Linux side. Console also uses bridge, as do FileIO, Mailbox etc. So **run-bridge** is a shell script which invokes python bridge.py from /usr/lib/python2.7/bridge. 
 
-So **run-bridge** is a shell script which invokes python bridge.py from /usr/lib/python2.7/bridge. 
+Check the process active on the TCP port : 
+
+    lsof -i 
+    >> dropbear   1321   root    3u  inet   1922      0t0  TCP *:ssh (LISTEN)
+    >> uhttpd     1328   root    4u  inet   1941      0t0  TCP *:www (LISTEN)
+    >> uhttpd     1328   root    5u  inet   1943      0t0  TCP *:https (LISTEN)
+    >> dnsmasq    1360 nobody    4u  inet   2010      0t0  UDP *:domain 
+    >> dnsmasq    1360 nobody    5u  inet   2011      0t0  TCP *:domain (LISTEN)
+    >> avahi-dae  1366 nobody   12u  inet   2055      0t0  UDP *:mdns 
+    >> dropbear   4652   root    5u  inet   5652      0t0  TCP 192.168.1.108:ssh->192.168.1.101:47890 (ESTABLISHED)
+    >> python    11888   root    4u  inet  13162      0t0  TCP localhost:6571 (LISTEN)
+    >> python    11888   root    5u  inet  13163      0t0  TCP localhost:5700 (LISTEN)
+    
+as you can see, after the sketch launche the bridge, the python listening on port 6571 and 5700 ! So now we can go to view what kind of data are in back and forward on the serial ! 
+
+
+
+
 
 ### Mailbox FileIO
 For example, FileIO instructs bridge to create a file by sending an Fx command, where x is the mode with which to open the file (r, w, a). Command g performs a write() via the bridge, s does a seek(2), f a close(2), etc. The Mailbox class also uses bridge with different commands (m is readMessage(), M is writeMessage(), J is writeJSON()).
