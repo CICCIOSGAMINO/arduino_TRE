@@ -95,8 +95,33 @@ Check if the DNS server address are setted/resolved by the interface :
     nameserver 8.8.8.8
     
 ### Config with wpa_supplicant
+If the network is protected by a WPA-PSK and WPA2-PSK you need to use the **wpasupplicant** package in order to get access to a WPA/WPA2 network : 
 
-// TODO 
+    apt-get install wpasupplicant 
+    
+Now you are ready to connect to a secured network, first step ->  Use the WPA passphrase to calculate the correct WPA PSK hash for your SSID by altering the following example : 
+
+    wpa_passphrase myssid my_secret_passphrase >> /etc/wpa_supplicant/wpa_supplicant.conf
+    
+If you don't put the passphrase on the command line, it will be prompted for. The above command gives the output:
+    
+    network={
+	    ssid="TP-MyNet"
+	    #psk="WIPASSW"
+	    psk=525eeca3c20ea31a57df9341ed57176e2701e1747e775dcf7e2592771fe424a1
+    }
+
+The second step is to run wpa_supplicant with the new configuration file : 
+
+    $ sudo wpa_supplicant -B -D wext -i wlan0 -c /etc/wpa_supplicant/wpa_supplicant.conf
+    
+-B means run wpa_supplicant in the background.
+-D specifies the wireless driver. wext is the generic driver.
+-c specifies the path for the configuration file.
+
+Use the iw command to verify that you are indeed connected to the SSID.
+
+TODO
 
   
 
