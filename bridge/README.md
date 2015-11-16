@@ -75,7 +75,38 @@ as you can see, after the sketch launche the bridge, the python listening on por
 
 
 
-### Bridge - Mailbox 
-The Mailbox
+### Read the Serial 
+Can be useful check the data on the Serial communication between the two processor, on the Arduino TRE like on the Arduino Yun, the two cores are connected through Serial, now we'll show how communicate through serial : 
+
+**Sketch (send data on serial)** 
+    
+    /* Simple Skecth for send the active time in sec */ 
+    long linuxBaud = 250000;
+
+    void setup() {
+      
+      Serial1.begin(linuxBaud);
+    
+    }
+    
+    void loop() {
+      
+      Serial1.println("Active (millis):" + String(millis()/1000));
+      delay(1000);
+    
+    }
+    
+    
+**Linux (read data from serial)**
+
+    cat /etc/ttyATH0 
+    >> Active (sec):1
+       Active (sec):2
+       Active (sec):3
+       Active (sec):4
+       ... 
+       
+Be careful with print to much data on the **Serial1** is the same port has created for laod the sketch on the 32u4 Atmel processor, so if you print to much data on the **Seril1** you get an error when you'll try to load a new sketch, to go around click the rest 32u4 button (on the right of RJ45 socket) and immediately load the new sketch ! 
+
 
 [2]:https://blog.arduino.cc/2013/09/05/hands-on-the-arduino-yuns-bridge/
