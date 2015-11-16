@@ -96,7 +96,7 @@ Can be useful check the data on the Serial communication between the two process
     
     }
     
-**Sketch (send data on serial1) on Arduino TRE ** 
+**Sketch (send data on serial1) on Arduino TRE** 
     
     /* Simple Skecth for send the active time in sec */ 
     long linuxBaud = 115200;
@@ -137,7 +137,51 @@ Can be useful check the data on the Serial communication between the two process
 Be careful with print to much data on the **Serial1** is the same port has created for laod the sketch on the 32u4 Atmel processor, so if you print to much data on the **Serial1** you get an error when you'll try to load a new sketch, to go around click the rest 32u4 button (on the right of RJ45 socket) and immediately load the new sketch ! For a very good example following the official arduino doc [here][3]. 
 
 ### Use the Bridge 
-Now it's time to use the Bridge, 
+Now it's time to use the Bridge, we'll show there a simple script that use the Bridge Python libraries such as bridge.py, mailbox.py, process.py, tcp.py ... in the folder **/usr/lib/python2.7/bridge ** : 
+
+    /*
+        Simple Bridge + Mailbox Test 
+    */
+    #include <Bridge.h>
+    
+    int led_status = 13;
+    int btn = 3;
+    unsigned long count = 0L;
+    
+    void setup() {
+        
+        // fire the run-bridge script on Linux side 
+        Bridge.begin();
+        delay(1000);
+        
+        // init the COUNT 
+        Bridge.put("COUNT", String(0));
+        
+    }
+    
+    void loop() {
+        
+        if (digitalRead(btn) == HIGH){
+            count = count + 1;
+            digitalWrite(led_status, HIGH);
+            Bridge.put("COUNT",String(count));
+            delay(1000);
+        }else{
+            digitalWrite(led_status, LOW);
+        }
+    }
+
+This sketch active the Bridge, and the JSONServer on the GNU/Linux side, so for see the variable (key,value) has setted from the sketch we have, we can query the JSON service active on the port 5700 : 
+
+    lsof -i | grep 5700 
+    >> python    4889       root    5u  IPv4  38959      0t0  TCP localhost:5700 (LISTEN)
+    
+Ok the service is active, to read data from the JSON server with the Arduino Yun as easy as type : 
+
+    curl http://localhost/data/get/COUNT 
+    
+With the Arduino TRE, we can read throuth the socket TCP active on TCP 5700, no HTTP services have bound !! 
+
 
 
 [2]:https://blog.arduino.cc/2013/09/05/hands-on-the-arduino-yuns-bridge/
