@@ -106,7 +106,8 @@ Can be useful check the data on the Serial communication between the two process
        Active (sec):4
        ... 
        
-Be careful with print to much data on the **Serial1** is the same port has created for laod the sketch on the 32u4 Atmel processor, so if you print to much data on the **Serial1** you get an error when you'll try to load a new sketch, to go around click the rest 32u4 button (on the right of RJ45 socket) and immediately load the new sketch ! 
+Be careful with print to much data on the **Serial1** is the same port has created for laod the sketch on the 32u4 Atmel processor, so if you print to much data on the **Serial1** you get an error when you'll try to load a new sketch, to go around click the rest 32u4 button (on the right of RJ45 socket) and immediately load the new sketch ! For a very good example following the official arduino doc [here][3]. 
 
 
 [2]:https://blog.arduino.cc/2013/09/05/hands-on-the-arduino-yuns-bridge/
+[3]:https://www.arduino.cc/en/Tutorial/YunSerialTerminal
