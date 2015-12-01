@@ -23,12 +23,8 @@ that you can find in the Web-Ide, now the Atmel processor has loaded all the rig
 
 On the Host Server we can install the Firmata implementation we prefer : 
 
-procesing
-[https://github.com/firmata/processing]
-[http://funnel.cc]
-python
-[https://github.com/MrYsLab/pymata-aio]
-[https://github.com/MrYsLab/PyMata]
++ procesing [https://github.com/firmata/processing][http://funnel.cc]
++ python [https://github.com/MrYsLab/pymata-aio] [https://github.com/MrYsLab/PyMata]
 [https://github.com/tino/pyFirmata]
 [https://github.com/lupeke/python-firmata]
 [https://github.com/firmata/pyduino]
