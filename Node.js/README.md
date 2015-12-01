@@ -16,12 +16,23 @@ the Debian's Jessi relase so :
   
 Next, open /etc/apt/sources.list in your favorite text editor and replace wheezy with jessie in the first 2 rows:
 
-  sudo vim /etc/apt/sources.list
+    sudo vim /etc/apt/sources.list
   
 Update your package list:
 
-  sudo apt-get update
+    sudo apt-get update
   
 and, finally, install GCC 4.9
 
-  sudo apt-get install gcc-4.9 g++-4.9
+    sudo apt-get install gcc-4.9 g++-4.9
+    
+Last step is to revert back from Jessie to Wheezy, open /etc/apt/sources.list and replace jessie with wheezy, after that do an update of your package list:
+
+    sudo vim /etc/apt/sources.list
+    sudo apt-get update
+    
+The above procedure will keep GCC 4.6 as the default C and C++ compiler for any package that depends on it, if you want to compile a program with GCC 4.9 you will have to use gcc-4.9 and g++-4.9 when invoking the compilers.
+
+Let’s try to compile and run a C++14 code that uses a generalized lambda expression : 
+
+    
