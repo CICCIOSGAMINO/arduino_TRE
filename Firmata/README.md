@@ -40,6 +40,9 @@ On the Host Server we can install the Firmata implementation we prefer :
 
 
 ### Getting start johnny-five
+Johnny-Five is the original JavaScript Robotics programming framework. Released by Bocoup in 2012, Johnny-Five is maintained by a community of passionate software developers and hardware engineers (Thanks). Over 75 developers have made contributions towards building a robust, extensible and composable ecosystem. Before start to use the Firmdata framework, you have to install node.js and npm, check it out !
+
+    
 
     
 
