@@ -78,7 +78,7 @@ your commands !
 ### USB Fix 
 If you use an Arduino TRE beta board remember to fix the USB problem with the USB_fix, reported in this repo : 
 
-	https://github.com/CICCIOSGAMINO/arduino_TRE/tree/master/USB_Fix
+	https://raw.githubusercontent.com/CICCIOSGAMINO/arduino_TRE/master/USB_Fix/script.sh
 	
 	
 ### Last Things 
