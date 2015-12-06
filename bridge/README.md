@@ -117,7 +117,7 @@ Can be useful check the data on the Serial communication between the two process
     
 **Linux (read data from serial1) Arduino Yun**
 
-    cat /etc/ttyATH0 
+    sudo cat /dev/ttyATH0 
     >> Active (sec):1
        Active (sec):2
        Active (sec):3
@@ -126,7 +126,7 @@ Can be useful check the data on the Serial communication between the two process
       
 **Linux (read data from serial1) Arduino TRE**
 
-    cat /etc/ttyO0    
+    sudo cat /dev/ttyO0    
     >> Active (sec):1
        Active (sec):2
        Active (sec):3
@@ -135,6 +135,27 @@ Can be useful check the data on the Serial communication between the two process
        
        
 Be careful with print to much data on the **Serial1** is the same port has created for laod the sketch on the 32u4 Atmel processor, so if you print to much data on the **Serial1** you get an error when you'll try to load a new sketch, to go around click the rest 32u4 button (on the right of RJ45 socket) and immediately load the new sketch ! For a very good example following the official arduino doc [here][3]. 
+
+### Use Node.js and serialport 
+serialport is a very power Node.js module to read and write from serial port, so like all others Node.js project init it and install the right dependencies : 
+
+    cd serialtest 
+    init npm 
+    npm install --save serialport 
+    touch app.js 
+    
+    // app.js 
+    var SerialPort = require('serialport').SerialPort
+    var s = new SerialPort('/dev/ttyO0', {baudrate:115200});
+
+    // manage the events
+    s.on('open', function(){
+        console.log('Connection to /dev/ttyO0 Opened ');
+
+        s.on('data', function(data){
+                console.log('Ddt Received : ' + data);
+        });
+    });
 
 ### Use the Bridge 
 Now it's time to use the Bridge, we'll show there a simple script that use the Bridge Python libraries such as bridge.py, mailbox.py, process.py, tcp.py ... in the folder **/usr/lib/python2.7/bridge ** : 
