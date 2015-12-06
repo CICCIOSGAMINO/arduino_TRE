@@ -157,7 +157,7 @@ serialport is a very power Node.js module to read and write from serial port, so
         });
     });
     
-**We've tested the ArduinoTRE serial port with different baud rate, but we've noticed that the best value to avoid problems is 115200 bits/sec ! ** 
+**We've tested the ArduinoTRE serial port with different baud rate, but we've noticed that the best value to avoid problems is 115200 bits/sec ! And yes of course consider no error control algoritms are active in all those case you are going to read the bits direct from the serial port ! ** 
 
 
 ### Use the Bridge 
