@@ -156,6 +156,9 @@ serialport is a very power Node.js module to read and write from serial port, so
                 console.log('Ddt Received : ' + data);
         });
     });
+    
+**We've tested the ArduinoTRE serial port with different baud rate, but we've noticed that the best value to avoid problems is 115200 bits/sec ! ** 
+
 
 ### Use the Bridge 
 Now it's time to use the Bridge, we'll show there a simple script that use the Bridge Python libraries such as bridge.py, mailbox.py, process.py, tcp.py ... in the folder **/usr/lib/python2.7/bridge ** : 
