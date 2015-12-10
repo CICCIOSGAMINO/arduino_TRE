@@ -78,6 +78,8 @@ as you can see, after the sketch launche the bridge, the python listening on por
 ### Read the Serial 
 Can be useful check the data on the Serial communication between the two processor, on the Arduino TRE like on the Arduino Yun, the two cores are connected through Serial, now we'll show how communicate through serial (important is the baud rate to set, on start-up in linux and in the c++ code on the 32u4 processor through the serial library) : 
 
+**Some Baudrate you can use : 300, 600, 1200, 2400, 4800, 9600, 14400, 19200, 28800, 38400, 57600, 115200, 250000 **
+
 **Sketch (send data on serial1) on Arduino Yun ** 
     
     /* Simple Skecth for send the active time in sec */ 
