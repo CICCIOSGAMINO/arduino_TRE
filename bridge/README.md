@@ -206,7 +206,6 @@ Ok the service is active, to read data from the JSON server with the Arduino Yun
 
     curl http://localhost/data/get/COUNT 
     
-With the Arduino TRE, we can read throuth the socket TCP active on TCP 5700, no HTTP services have bound !! 
 
 
 
