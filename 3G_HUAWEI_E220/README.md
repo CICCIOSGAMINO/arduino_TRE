@@ -76,6 +76,23 @@ the params for the ppp0 (peer-to-peer) interface like all the others interfaces 
     auto ppp0
     iface ppp0 inet wvdial
     provider E220-WIND 
+    
+### up/Down the ppp0 Interface
+In ubuntu you can use the command **ifconfig** to check the status, up/down the interface :
+
+    
+    ifconfig ppp0
+    > ppp0      Link encap:Point-to-Point Protocol  
+      inet addr:10.22.94.65  P-t-P:10.64.64.64  Mask:255.255.255.255
+      
+    // down the ppp0 interface 
+    ifconfig ppp0 down 
+    
+    // up the ppp0 interface 
+    ifconfig ppp0 up 
+    
+keep in mind to restart the wvdial before up the interface !!! 
+
 
 ### Check the ppp0 
 Check the interface ppp0 just setted on Huawei E220 modem with the ifconfig command: 
