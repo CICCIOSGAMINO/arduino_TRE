@@ -67,6 +67,10 @@ Now that the wvdial 'Dial E220' is setted on ppp0 interface, launch the interfac
 
     wvdial E220                 // launch the E220 interface on ppp0 
     
+With the comand **wvdialconf** you can check the default modem configuration, sometimes this command is not 
+very helpful ! 
+
+    
     
 ### Set the Interface 
 To set the interfaces go to the interfaces file in **/etc/network/interfaces** and if you need set 
